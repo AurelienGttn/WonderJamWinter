@@ -9,7 +9,6 @@ public class MenuHandler : MonoBehaviour
 
     public void Start()
     {
-        canvasCredits.SetActive(false);
     }
 
     public void onClickNewGame()
