@@ -74,7 +74,7 @@ public class MenuHandler : MonoBehaviour
     }
 
 
-    public void setAlphaObject(GameObject myObject, float a)
+    public static void setAlphaObject(GameObject myObject, float a)
     {
         foreach (Transform child in myObject.transform)
         {
@@ -86,7 +86,8 @@ public class MenuHandler : MonoBehaviour
         }
     }
 
-    public void Exit() {
+    public void Exit()
+    {
 
         Application.Quit();
     }
