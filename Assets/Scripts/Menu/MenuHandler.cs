@@ -11,7 +11,7 @@ public class MenuHandler : MonoBehaviour
     {
     }
 
-    public void onClickNewGame()
+    public void onClickbtn_Play()
     {
         SceneManager.LoadScene(1);
     }
@@ -36,6 +36,7 @@ public class MenuHandler : MonoBehaviour
             a -= 0.05f;
         }
         canvasMenu.SetActive(false);
+        canvasCredits.SetActive(true);
 
         yield return new WaitForSeconds(0.5f);
         canvasCredits.SetActive(true);
@@ -83,5 +84,10 @@ public class MenuHandler : MonoBehaviour
             }
             setAlphaObject(child.gameObject, a);
         }
+    }
+
+    public void Exit() {
+
+        Application.Quit();
     }
 }
