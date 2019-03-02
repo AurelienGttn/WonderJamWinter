@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
@@ -11,6 +9,8 @@ public class playerMovement : MonoBehaviour
 
     private Rigidbody rb;
     private float limitMag = 0.3f;
+
+    private bool mustDie = false;
 
     // Start is called before the first frame update
     void Awake()
@@ -34,7 +34,8 @@ public class playerMovement : MonoBehaviour
             {
                 pression = 100.0f;
             }
-        } else
+        }
+        else
         {
             moveHorizontal = Input.GetAxis("J2_LeftStickHorizontal");
             moveVertical = Input.GetAxis("J2_LeftStickVertical");
@@ -45,25 +46,34 @@ public class playerMovement : MonoBehaviour
                 pression = 100.0f;
             }
         }
-        
+
 
         Vector3 orientation = new Vector3(moveHorizontal, moveVertical, 0.0f);
-        if(orientation.magnitude > limitMag)
+        if (orientation.magnitude > limitMag)
         {
             transform.right = orientation;
 
             //transform.LookAt(orientation);
         }
-        if(force != 0.0 && pression > 0)
+        if (force != 0.0 && pression > 0)
         {
-            pression = pression - force/10;
+            pression = pression - force / 10;
             rb.AddForce(force * transform.right * speed);
         }
-        if(pression < 0)
+        if (pression < 0)
         {
             pression = 0;
         }
 
+        if (mustDie)
+        {
+            gameObject.SetActive(false);
+        }
 
+    }
+
+    public void death()
+    {
+        mustDie = true;
     }
 }
