@@ -42,12 +42,6 @@ public class Explosif : MonoBehaviour
             }
 
         }
-
-        if (other.CompareTag("Asteroïde"))
-        {
-            rbExplosif.velocity = -rbExplosif.velocity;
-
-        }
     }
 
     IEnumerator WaitGameOver(GameObject player, GameObject panelPlayer)
