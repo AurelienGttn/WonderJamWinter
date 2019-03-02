@@ -12,24 +12,16 @@ public class MenuHandler : MonoBehaviour
     public EventSystem eventSystem;
     public GameObject startButton;
     public GameObject backButton;
+    public GameObject backButton2;
 
-  
-  
+
 
     public void Start()
     {
         canvasMenu.SetActive(true);
         canvasCredits.SetActive(false);
-
-
-       
-        ColorBlock colorBlock = new ColorBlock();
-        colorBlock.normalColor = new Color(255, 255, 255, 0);
-        colorBlock.highlightedColor = new Color(0, 0, 0, 101);
-
-
-        Debug.Log(colorBlock.normalColor);
-        Debug.Log(colorBlock.highlightedColor);
+        canvasIntruction.SetActive(false);
+        eventSystem.SetSelectedGameObject(startButton);
     }
 
     public void onClickbtn_Play()
@@ -40,8 +32,8 @@ public class MenuHandler : MonoBehaviour
 
     public void onClickIntructions()
     {
-        StartCoroutine("MenutoIntrcution");
-        eventSystem.SetSelectedGameObject(backButton);
+        StartCoroutine("menuToIntructions");
+        eventSystem.SetSelectedGameObject(backButton2);
     }
 
     public void onClickCredits()
@@ -54,9 +46,11 @@ public class MenuHandler : MonoBehaviour
     {
         StartCoroutine("creditsToMenu");
         eventSystem.SetSelectedGameObject(startButton);
-
-    
-
+    }
+    public void onClickMenu_Intructions()
+    {
+        StartCoroutine("IntructionToMenu");
+        eventSystem.SetSelectedGameObject(startButton);
     }
 
     public IEnumerator menuToCredits()
@@ -83,6 +77,36 @@ public class MenuHandler : MonoBehaviour
         }
 
       
+
+
+
+    }
+
+
+    public IEnumerator menuToIntructions()
+    {
+
+        float a = 1;
+        while (a >= 0)
+        {
+            yield return new WaitForSeconds(0.01f);
+            setAlphaObject(canvasMenu, a);
+            a -= 0.05f;
+        }
+        canvasMenu.SetActive(false);
+
+
+        yield return new WaitForSeconds(0.5f);
+        canvasIntruction.SetActive(true);
+        setAlphaObject(canvasIntruction, 0);
+        while (a <= 1)
+        {
+            yield return new WaitForSeconds(0.01f);
+            setAlphaObject(canvasIntruction, a);
+            a += 0.05f;
+        }
+
+
 
 
 
@@ -125,7 +149,7 @@ public class MenuHandler : MonoBehaviour
             setAlphaObject(canvasIntruction, a);
             a -= 0.05f;
         }
-        canvasCredits.SetActive(false);
+        canvasIntruction.SetActive(false);
 
         yield return new WaitForSeconds(0.5f);
         canvasMenu.SetActive(true);

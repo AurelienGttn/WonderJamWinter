@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-    public float speed = 3.0f;
+    public float speed = 15.0f;
     public float pression = 100.0f;
 
     public bool isPlayer1;
