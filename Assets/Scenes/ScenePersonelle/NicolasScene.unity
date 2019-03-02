@@ -316,6 +316,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 535813752}
+  - component: {fileID: 535813753}
   m_Layer: 0
   m_Name: StationRavitaillement
   m_TagString: Untagged
@@ -343,6 +344,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &535813753
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535813751}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: -5.5, z: 5}
 --- !u!1001 &550644371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -418,6 +432,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 550644371}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &550644373 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: e4964c9b65913c44092202a7bd16c758,
+    type: 3}
+  m_PrefabInstance: {fileID: 550644371}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &550644374
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 550644373}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.499997, y: 8.15, z: 6.600001}
+  m_Center: {x: 2.7499986, y: 4.075, z: 3.3000004}
 --- !u!1001 &1080743685
 PrefabInstance:
   m_ObjectHideFlags: 0
