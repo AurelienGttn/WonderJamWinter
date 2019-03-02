@@ -25,20 +25,20 @@ public class Explosif : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player"))
         {
-            rbExplosif.GetComponent<MeshRenderer>().enabled = false; 
-            explosion.SetActive(true); 
-            if(other.name == "Player 1")
+            rbExplosif.GetComponent<MeshRenderer>().enabled = false;
+            explosion.SetActive(true);
+            if (collision.collider.name == "Player 1")
             {
                 StartCoroutine(WaitGameOver(player1, panelPlayer1));
-                
+
             }
-            if (other.name == "Player 2")
+            if (collision.collider.name == "Player 2")
             {
-               StartCoroutine(WaitGameOver(player2, panelPlayer2));
+                StartCoroutine(WaitGameOver(player2, panelPlayer2));
             }
 
         }
