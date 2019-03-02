@@ -33,7 +33,7 @@ public class Asteroïde : MonoBehaviour
         randomDirectionY = Random.Range(positionPlayer1.y, positionPlayer2.y);
 
         transform.LookAt(new Vector3(randomDirectionX, randomDirectionY, 0.0f));
-        rbAsteroïde.AddForce(transform.forward*200); 
+        rbAsteroïde.AddForce(transform.forward * 400 * rbAsteroïde.mass);
     }
 
     // Update is called once per frame
