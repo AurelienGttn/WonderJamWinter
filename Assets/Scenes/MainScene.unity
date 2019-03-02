@@ -517,7 +517,7 @@ PrefabInstance:
     - target: {fileID: 4637887294802815586, guid: 1216a7d1e735ef04fac32eac6561adb2,
         type: 3}
       propertyPath: orthographic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4637887294802815586, guid: 1216a7d1e735ef04fac32eac6561adb2,
         type: 3}
@@ -575,7 +575,7 @@ PrefabInstance:
     - target: {fileID: 6345338572017334782, guid: e1b2cfb558023504a928a77df71def41,
         type: 3}
       propertyPath: orthographic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6345338572017334782, guid: e1b2cfb558023504a928a77df71def41,
         type: 3}
