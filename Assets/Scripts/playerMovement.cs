@@ -9,6 +9,9 @@ public class playerMovement : MonoBehaviour
 
     public bool isPlayer1;
 
+    public GameObject Smoke;
+    private List<GameObject> SmokeEffect = new List<GameObject>();
+
     private Rigidbody rb;
     private float limitMag = 0.3f;
     private float mashForce = 10.0f;
@@ -17,6 +20,10 @@ public class playerMovement : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        foreach (Transform child in Smoke.transform)
+        {
+            SmokeEffect.Add(child.gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -50,11 +57,9 @@ public class playerMovement : MonoBehaviour
         {
             moveHorizontal = Input.GetAxis("J2_LeftStickHorizontal");
             moveVertical = Input.GetAxis("J2_LeftStickVertical");
-            force = Input.GetAxis("J2_RightTrigger");
-
-            if (Input.GetButtonDown("J2_BButton"))
+            if (pression > 0)
             {
-                pression = 100.0f;
+                force = Input.GetAxis("J2_RightTrigger");
             }
             else
             {
@@ -73,18 +78,51 @@ public class playerMovement : MonoBehaviour
             }
         }
 
-
         Vector3 orientation = new Vector3(moveHorizontal, moveVertical, 0.0f);
-        if(orientation.magnitude > limitMag)
+        
+        if (orientation.magnitude > limitMag)
         {
-            transform.right = orientation;
-
-            //transform.LookAt(orientation);
+            if(orientation == new Vector3(-1,0,0))
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 180.0f);
+            } else
+            {
+                transform.right = orientation;
+            }
+            
         }
         if(force != 0.0/* && pression > 0*/)
         {
+            Debug.Log(force);
             pression = pression - force/10;
             rb.AddForce(force * transform.right * speed);
+            if(pression > 0 )
+            {
+                foreach (GameObject go in SmokeEffect)
+                {
+                    ParticleSystem psystem = go.GetComponent<ParticleSystem>();
+                    if (!psystem.isPlaying)
+                    {
+                        psystem.loop = true;
+                        psystem.Play();
+                    }
+                }
+            } else
+            {
+                SmokeEffect[0].GetComponent<ParticleSystem>().Play();
+            }
+            
+            
+        } else
+        {
+            foreach (GameObject go in SmokeEffect)
+            {
+                ParticleSystem psystem = go.GetComponent<ParticleSystem>();
+                if (psystem.isPlaying)
+                {
+                    psystem.loop = false;
+                }
+            }
         }
         if(pression < 0)
         {
