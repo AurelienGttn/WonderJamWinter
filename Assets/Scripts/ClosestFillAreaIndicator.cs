@@ -32,8 +32,11 @@ public class ClosestFillAreaIndicator : MonoBehaviour
 
 	// Update is called once per frame
 	void GetClosestFillArea()
-	{
-		float closestDistance = float.MaxValue;
+    {
+        fillAreas = GameObject.FindGameObjectsWithTag("Station");
+        closestFillArea = fillAreas[0].transform;
+
+        float closestDistance = float.MaxValue;
 		foreach (GameObject fillArea in fillAreas) {
 			Transform currentFillArea = fillArea.transform;
 			float currentDistance = Vector3.Distance(transform.position, currentFillArea.position);
