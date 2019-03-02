@@ -179,7 +179,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &595990477
 PrefabInstance:
@@ -373,7 +373,7 @@ PrefabInstance:
     - target: {fileID: 1711655344626839260, guid: dfc9ff7c7447284448a1e3bcaa9c047d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1711655344626839260, guid: dfc9ff7c7447284448a1e3bcaa9c047d,
         type: 3}
@@ -497,7 +497,7 @@ RectTransform:
   - {fileID: 2002208766672472917}
   - {fileID: 595990478}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -568,7 +568,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2006330700
 GameObject:
@@ -652,6 +652,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2098922251
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1880014770348990, guid: ec18485855dcae942a751b9fb56547e9, type: 3}
+      propertyPath: m_Name
+      value: Oxar Freighter
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736601740377342, guid: ec18485855dcae942a751b9fb56547e9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -21.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736601740377342, guid: ec18485855dcae942a751b9fb56547e9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.6850321
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736601740377342, guid: ec18485855dcae942a751b9fb56547e9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -9.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736601740377342, guid: ec18485855dcae942a751b9fb56547e9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736601740377342, guid: ec18485855dcae942a751b9fb56547e9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.14106828
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736601740377342, guid: ec18485855dcae942a751b9fb56547e9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736601740377342, guid: ec18485855dcae942a751b9fb56547e9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9899999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736601740377342, guid: ec18485855dcae942a751b9fb56547e9, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736601740377342, guid: ec18485855dcae942a751b9fb56547e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736601740377342, guid: ec18485855dcae942a751b9fb56547e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -16.219
+      objectReference: {fileID: 0}
+    - target: {fileID: 4736601740377342, guid: ec18485855dcae942a751b9fb56547e9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ec18485855dcae942a751b9fb56547e9, type: 3}
 --- !u!224 &2002208766672472917 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3636038633411674349, guid: d1ff68334c92e994da9151edc593a53f,
