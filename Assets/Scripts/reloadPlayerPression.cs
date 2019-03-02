@@ -15,4 +15,13 @@ public class reloadPlayerPression : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Enter");
+        if(other.tag == "Player")
+        {
+            other.gameObject.GetComponent<playerMovement>().pression = 100.0f;
+        }
+    }
 }

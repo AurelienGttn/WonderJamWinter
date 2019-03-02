@@ -11,6 +11,7 @@ public class playerMovement : MonoBehaviour
 
     private Rigidbody rb;
     private float limitMag = 0.3f;
+    private float mashForce = 10.0f;
 
     // Start is called before the first frame update
     void Awake()
@@ -28,11 +29,22 @@ public class playerMovement : MonoBehaviour
         {
             moveHorizontal = Input.GetAxis("J1_LeftStickHorizontal");
             moveVertical = Input.GetAxis("J1_LeftStickVertical");
-            force = Input.GetAxis("J1_RightTrigger");
-
-            if (Input.GetButtonDown("J1_AButton"))
+            if(pression > 0)
             {
-                pression = 100.0f;
+                force = Input.GetAxis("J1_RightTrigger");
+            } else
+            {
+                if (Input.GetButtonDown("J1_AButton"))
+                {
+                    force = mashForce;
+                } else
+                {
+                    force = 0.0f;
+                }
+                if (Input.GetButtonDown("J1_BButton"))
+                {
+                    pression = 100.0f;
+                }
             }
         } else
         {
@@ -40,12 +52,27 @@ public class playerMovement : MonoBehaviour
             moveVertical = Input.GetAxis("J2_LeftStickVertical");
             force = Input.GetAxis("J2_RightTrigger");
 
-            if (Input.GetButtonDown("J2_AButton"))
+            if (Input.GetButtonDown("J2_BButton"))
             {
                 pression = 100.0f;
             }
+            else
+            {
+                if (Input.GetButtonDown("J2_AButton"))
+                {
+                    force = mashForce;
+                }
+                else
+                {
+                    force = 0.0f;
+                }
+                if (Input.GetButtonDown("J2_BButton"))
+                {
+                    pression = 100.0f;
+                }
+            }
         }
-        
+
 
         Vector3 orientation = new Vector3(moveHorizontal, moveVertical, 0.0f);
         if(orientation.magnitude > limitMag)
@@ -54,7 +81,7 @@ public class playerMovement : MonoBehaviour
 
             //transform.LookAt(orientation);
         }
-        if(force != 0.0 && pression > 0)
+        if(force != 0.0/* && pression > 0*/)
         {
             pression = pression - force/10;
             rb.AddForce(force * transform.right * speed);
