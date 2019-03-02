@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class SpawnObstacle : MonoBehaviour
 {
+
+    [SerializeField] private Camera player1Camera, player2Camera;
+    private Camera firstCamera;
+
     // the obstacle struct holds data to spawn each obstacle
     [System.Serializable]
     public struct ObstacleSpawn
@@ -30,11 +34,21 @@ public class SpawnObstacle : MonoBehaviour
     private IEnumerator Spawn(ObstacleSpawn obstacle)
     {
         spawnHeight = Random.Range(-1f, 2f);
-        spawnPos = Camera.main.ViewportToWorldPoint(new Vector3(1.1f, spawnHeight, 10f));
+        
+        firstCamera = GetFirstCamera();
+        spawnPos = firstCamera.ViewportToWorldPoint(new Vector3(1.1f, spawnHeight, 3.5f));
 
         newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
 
         yield return new WaitForSeconds(obstacle.cooldown);
         StartCoroutine(Spawn(obstacle));
+    }
+
+    private Camera GetFirstCamera()
+    {
+        if (player1Camera.transform.position.x > player2Camera.transform.position.x)
+            return player1Camera;
+        else
+            return player2Camera;
     }
 }
