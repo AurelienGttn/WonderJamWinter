@@ -6,28 +6,13 @@ ModelImporter:
     100000: //RootNode
     100002: default
     400000: //RootNode
-<<<<<<< HEAD:Assets/Kenney Assets/SpacePack/BigAsteroid.blend.meta
-    2100000: Material_002
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Icosphere
-    7400000: Default Take
-    9500000: //RootNode
-    2186277476908879412: ImportLogs
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material_002
-    second: {fileID: 2100000, guid: 366d3b4e1d9fde140b0777977954a01e, type: 2}
-=======
     400002: default
     2100000: Material.002
     2300000: default
     3300000: default
     4300000: default
+    9500000: //RootNode
   externalObjects: {}
->>>>>>> Théo:Assets/Kenney Assets/SpacePack/BigAsteroid.obj.meta
   materials:
     importMaterials: 1
     materialName: 0
@@ -80,7 +65,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -107,7 +92,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

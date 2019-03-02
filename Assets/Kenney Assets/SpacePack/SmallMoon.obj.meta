@@ -3,17 +3,6 @@ guid: d640a7b5c002f624d89f14db711c0364
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-<<<<<<< HEAD:Assets/Kenney Assets/SpacePack/Moon.blend.meta
-    100000: //RootNode
-    400000: //RootNode
-    2100000: Material_001
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Icosphere
-    7400000: Default Take
-    9500000: //RootNode
-    2186277476908879412: ImportLogs
-=======
     100000: default
     100002: //RootNode
     400000: default
@@ -22,13 +11,8 @@ ModelImporter:
     2300000: default
     3300000: default
     4300000: default
->>>>>>> Théo:Assets/Kenney Assets/SpacePack/SmallMoon.obj.meta
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 8b3255f6095f77a4e9393f7dfcaaba5a, type: 2}
+    9500000: //RootNode
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -81,7 +65,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -108,7 +92,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
