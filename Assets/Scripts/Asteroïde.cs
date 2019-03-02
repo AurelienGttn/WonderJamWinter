@@ -18,7 +18,6 @@ public class Asteroïde : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.localScale = new Vector3(Random.Range(0.1f, 0.3f), Random.Range(0.1f, 0.3f), Random.Range(0.1f, 0.3f));
 
         rbAsteroïde = GetComponent<Rigidbody>();
         rotation = new Vector3(0.0f, 0.0f, Random.Range(0.1f, 1f));
@@ -33,7 +32,16 @@ public class Asteroïde : MonoBehaviour
         randomDirectionY = Random.Range(positionPlayer1.y, positionPlayer2.y);
 
         transform.LookAt(new Vector3(randomDirectionX, randomDirectionY, 0.0f));
-        rbAsteroïde.AddForce(transform.forward * 400 * rbAsteroïde.mass);
+        if (name.Contains("meteor"))
+        {
+            rbAsteroïde.AddForce(transform.forward * 400 * rbAsteroïde.mass);
+            transform.localScale = new Vector3(Random.Range(0.1f, 0.3f), Random.Range(0.1f, 0.3f), Random.Range(0.1f, 0.3f));
+        }
+        else if (name.Contains("barrel"))
+        {
+            rbAsteroïde.AddForce(transform.forward * 50 * rbAsteroïde.mass);
+            transform.localScale = new Vector3(Random.Range(1f, 2f), Random.Range(1f, 2f), Random.Range(1f, 2f));
+        }
     }
 
     // Update is called once per frame

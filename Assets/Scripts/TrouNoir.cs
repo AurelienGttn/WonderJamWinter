@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class TrouNoir : MonoBehaviour
 {
-    public float rayonAttraction = 5.0f;
+    private float rayonAttraction = 10.0f;
 
     private Collider[] objetProche;
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -20,15 +19,22 @@ public class TrouNoir : MonoBehaviour
         objetProche = Physics.OverlapSphere(transform.position, rayonAttraction);
         foreach(Collider c in objetProche)
         {
-            Debug.Log(c.gameObject.name);
             if(c.tag == "Player")
             {
                 Vector3 forceDirection = transform.position - c.transform.position;
-
+                float distance = Vector3.Distance(transform.position, c.transform.position);
                 // apply force on target towards me
-                c.GetComponent<Rigidbody>().AddForce(forceDirection.normalized * 200 * Time.fixedDeltaTime);
+                c.GetComponent<Rigidbody>().AddForce(forceDirection.normalized * (500/distance) * Time.fixedDeltaTime);
 
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Debug.Log("Kill Player");
         }
     }
 }
