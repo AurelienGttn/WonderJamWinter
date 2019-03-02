@@ -14,6 +14,8 @@ public class IAVaisseaux : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        transform.rotation = Quaternion.Euler(-90, 0, 0);
+
         spaceshipRigidBody = GetComponent<Rigidbody>();
         Players = GameObject.FindGameObjectsWithTag("Player");
     }
