@@ -13,7 +13,6 @@ public class SpawnObstacle : MonoBehaviour
     public struct ObstacleSpawn
     {
         public GameObject prefab;
-        public float speed;
         public float cooldown;
         public Transform parent;
     }
