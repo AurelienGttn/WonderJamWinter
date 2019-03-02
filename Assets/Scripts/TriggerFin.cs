@@ -5,25 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class TriggerFin : MonoBehaviour
 {
-
+    private Score score;
     public string NomLevel;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        score = FindObjectOfType<Score>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.CompareTag("Player"))
         {
-            Debug.Log("Fin du jeu");
+            score.SetScores();
             SceneManager.LoadScene(NomLevel, LoadSceneMode.Single);
         }
     }
