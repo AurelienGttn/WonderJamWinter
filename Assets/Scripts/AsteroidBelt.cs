@@ -8,9 +8,7 @@ public class AsteroidBelt : MonoBehaviour
 
     private void Start()
     {
-        xRotation = Random.Range(0, 10);
-        yRotation = Random.Range(0, 10);
-        zRotation = Random.Range(0, 10);
+        zRotation = Random.Range(0.1f, 2f);
     }
 
     // Update is called once per frame

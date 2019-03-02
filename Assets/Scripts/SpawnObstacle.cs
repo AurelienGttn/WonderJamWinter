@@ -33,10 +33,10 @@ public class SpawnObstacle : MonoBehaviour
 
     private IEnumerator Spawn(ObstacleSpawn obstacle)
     {
-        spawnHeight = Random.Range(-1f, 2f);
+        spawnHeight = Random.Range(-4f, 5f);
         
         firstCamera = GetFirstCamera();
-        spawnPos = firstCamera.ViewportToWorldPoint(new Vector3(1.1f, spawnHeight, 3.5f));
+        spawnPos = firstCamera.ViewportToWorldPoint(new Vector3(1.1f, spawnHeight, -firstCamera.GetComponent<CameraMouvement>().offsetZ));
 
         newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
 
