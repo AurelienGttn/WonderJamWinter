@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class EndIndicator : MonoBehaviour
 {
-	public Transform target;
+	private Transform target;
 	public float hideDistance;
+
+	void Start()
+	{
+		target = GameObject.FindGameObjectWithTag("EndOfRace").transform;
+	}
 
 	void Update()
 	{
