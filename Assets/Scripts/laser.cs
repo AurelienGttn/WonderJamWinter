@@ -25,13 +25,12 @@ public class laser : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        Debug.Log("collision");
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("player");
             collision.gameObject.GetComponent<playerMovement>().death();
-            mustDie = true;
+
         }
+        mustDie = true;
 
 
     }
