@@ -6,7 +6,6 @@ public class Asteroïde : MonoBehaviour
 {
     private Rigidbody rbPlayer;
     private Rigidbody rbAsteroïde;
-    private float randomRotation;
     private float randomDirectionX;
     private float randomDirectionY;
     private GameObject Player1;
