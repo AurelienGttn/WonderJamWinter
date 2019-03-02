@@ -304,7 +304,7 @@ Transform:
   m_GameObject: {fileID: 3749512232657392960}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4933582118155162248}
   - {fileID: 2144883916}
@@ -380,12 +380,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spaceshipRigidBody: {fileID: 1360893991}
-  maxDistanceDetection: 5
+  maxDistanceDetection: 30
   forceFactor: 2
   maxVelocity: 5
   Players: []
   laser: {fileID: 5560061754511373923, guid: 0a4fccc48ec3c6b42acb78c48deec88c, type: 3}
-  laserVelocity: 5
+  laserVelocity: 10
 --- !u!1 &8934080384138779756
 GameObject:
   m_ObjectHideFlags: 0
