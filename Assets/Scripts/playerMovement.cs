@@ -47,17 +47,17 @@ public class playerMovement : MonoBehaviour
         }
         
 
-        Vector3 orientation = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        Vector3 orientation = new Vector3(moveHorizontal, moveVertical, 0.0f);
         if(orientation.magnitude > limitMag)
         {
-            transform.forward = orientation;
+            transform.right = orientation;
 
             //transform.LookAt(orientation);
         }
         if(force != 0.0 && pression > 0)
         {
             pression = pression - force/10;
-            rb.AddForce(force * transform.forward * speed);
+            rb.AddForce(force * transform.right * speed);
         }
         if(pression < 0)
         {
