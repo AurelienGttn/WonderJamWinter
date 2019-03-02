@@ -12,8 +12,6 @@ public class ClosestFillAreaIndicator : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		fillAreas = GameObject.FindGameObjectsWithTag("Station");
-		closestFillArea = fillAreas[0].transform;
 		InvokeRepeating("GetClosestFillArea", 0.0f, 1.0f);
 	}
 
