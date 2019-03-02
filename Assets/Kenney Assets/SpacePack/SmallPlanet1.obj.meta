@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e193ff3c0aa9eee4e9f7cc0189dc63ca
+guid: e0177a6be23a47c4eb9c9ffa12b81af1
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -11,7 +11,10 @@ ModelImporter:
     2300000: default
     3300000: default
     4300000: default
+<<<<<<< HEAD
     9500000: //RootNode
+=======
+>>>>>>> develop
   externalObjects: {}
   materials:
     importMaterials: 1
