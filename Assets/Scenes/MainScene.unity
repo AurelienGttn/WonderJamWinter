@@ -363,17 +363,17 @@ PrefabInstance:
     - target: {fileID: 1369668526088984421, guid: 70b82fde50a246446a393a576c761442,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.04
+      value: 10.12
       objectReference: {fileID: 0}
     - target: {fileID: 1369668526088984421, guid: 70b82fde50a246446a393a576c761442,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 3.35
       objectReference: {fileID: 0}
     - target: {fileID: 1369668526088984421, guid: 70b82fde50a246446a393a576c761442,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 1369668526088984421, guid: 70b82fde50a246446a393a576c761442,
         type: 3}
@@ -414,6 +414,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777959148, guid: 70b82fde50a246446a393a576c761442, type: 3}
+      propertyPath: m_Drag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777959147, guid: 70b82fde50a246446a393a576c761442, type: 3}
+      propertyPath: cube
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70b82fde50a246446a393a576c761442, type: 3}
@@ -561,7 +569,7 @@ PrefabInstance:
     - target: {fileID: 8143767088805991088, guid: 152a319a3091be9478d6f07686741799,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4.7
       objectReference: {fileID: 0}
     - target: {fileID: 8143767088805991088, guid: 152a319a3091be9478d6f07686741799,
         type: 3}
@@ -648,7 +656,7 @@ PrefabInstance:
     - target: {fileID: 2153118450919895945, guid: d2351f09fba2c5d4aa86176954e1a738,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 12.99
       objectReference: {fileID: 0}
     - target: {fileID: 2153118450919895945, guid: d2351f09fba2c5d4aa86176954e1a738,
         type: 3}
