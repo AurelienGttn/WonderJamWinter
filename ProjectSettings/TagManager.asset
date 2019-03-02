@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - "Astero\xEFde"
+  - Station
+  - FxTemporaire
+  - EndOfRace
   layers:
   - Default
   - TransparentFX
