@@ -24,7 +24,7 @@ public class TriggerFin : MonoBehaviour
         if(other.tag == "Player")
         {
             Debug.Log("Fin du jeu");
-            SceneManager.LoadScene(NomLevel, LoadSceneMode.Additive);
+            SceneManager.LoadScene(NomLevel, LoadSceneMode.Single);
         }
     }
 }
