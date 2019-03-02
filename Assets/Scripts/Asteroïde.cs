@@ -18,6 +18,8 @@ public class Asteroïde : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        transform.localScale = new Vector3(Random.Range(0.1f, 0.3f), Random.Range(0.1f, 0.3f), Random.Range(0.1f, 0.3f));
+
         rbAsteroïde = GetComponent<Rigidbody>();
         rotation = new Vector3(0.0f, 0.0f, Random.Range(0.1f, 1f));
 
