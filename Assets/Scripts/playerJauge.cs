@@ -11,7 +11,7 @@ public class playerJauge : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        textPourcentage = GetComponent<Text>();
+        textPourcentage = this.transform.Find("Pourcentage").GetComponent<Text>();
     }
 
     // Update is called once per frame
