@@ -18,8 +18,10 @@ public class Asteroïde : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        transform.localScale = new Vector3(Random.Range(0.1f, 0.3f), Random.Range(0.1f, 0.3f), Random.Range(0.1f, 0.3f));
+
         rbAsteroïde = GetComponent<Rigidbody>();
-        rotation = new Vector3(0.0f, 0.0f, 0.5f);
+        rotation = new Vector3(0.0f, 0.0f, Random.Range(0.1f, 1f));
 
         Player1 = GameObject.Find("Player 1");
         positionPlayer1 = Player1.transform.position; 
@@ -39,7 +41,8 @@ public class Asteroïde : MonoBehaviour
     {
         transform.eulerAngles += rotation; 
     }
-
+   
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player") || other.CompareTag("Asteroïde"))
@@ -51,5 +54,5 @@ public class Asteroïde : MonoBehaviour
 
         }
     }
-
+    */
 }
