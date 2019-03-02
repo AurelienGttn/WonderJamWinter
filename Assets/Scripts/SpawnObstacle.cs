@@ -13,7 +13,6 @@ public class SpawnObstacle : MonoBehaviour
     public struct ObstacleSpawn
     {
         public GameObject prefab;
-        public float speed;
         public float cooldown;
         public Transform parent;
     }
@@ -33,7 +32,7 @@ public class SpawnObstacle : MonoBehaviour
 
     private IEnumerator Spawn(ObstacleSpawn obstacle)
     {
-        spawnHeight = Random.Range(-4f, 5f);
+        spawnHeight = Random.Range(0f, 1f);
         
         firstCamera = GetFirstCamera();
         spawnPos = firstCamera.ViewportToWorldPoint(new Vector3(1.1f, spawnHeight, -firstCamera.GetComponent<CameraMouvement>().offsetZ));

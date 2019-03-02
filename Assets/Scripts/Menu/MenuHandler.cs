@@ -141,34 +141,7 @@ public class MenuHandler : MonoBehaviour
     }
 
 
-        public IEnumerator MenutoIntrcution()
-        {
-
-        float a = 1;
-        while (a >= 0)
-        {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(canvasMenu, a);
-            a -= 0.05f;
-        }
-        canvasMenu.SetActive(false);
-
-
-        yield return new WaitForSeconds(0.5f);
-        canvasIntruction.SetActive(true);
-        setAlphaObject(canvasIntruction, 0);
-        while (a <= 1)
-        {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(canvasIntruction, a);
-            a += 0.05f;
-        }
-
-
-
-    }
-
-    public void setAlphaObject(GameObject myObject, float a)
+    public static void setAlphaObject(GameObject myObject, float a)
     {
         foreach (Transform child in myObject.transform)
         {
@@ -182,7 +155,8 @@ public class MenuHandler : MonoBehaviour
        
     }
 
-    public void Exit() {
+    public void Exit()
+    {
 
         Application.Quit();
     }
