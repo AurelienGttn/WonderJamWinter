@@ -93,7 +93,6 @@ public class playerMovement : MonoBehaviour
         }
         if(force != 0.0/* && pression > 0*/)
         {
-            Debug.Log(force);
             pression = pression - force/10;
             rb.AddForce(force * transform.right * speed);
             if(pression > 0 )

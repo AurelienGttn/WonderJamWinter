@@ -142,6 +142,10 @@ PrefabInstance:
       propertyPath: rightArm
       value: 
       objectReference: {fileID: 1711655346240145092}
+    - target: {fileID: 859094594, guid: 96daa78f26e45e94ea01193b4c9ce1d0, type: 3}
+      propertyPath: m_Name
+      value: embout
+      objectReference: {fileID: 0}
     - target: {fileID: 116735079, guid: 96daa78f26e45e94ea01193b4c9ce1d0, type: 3}
       propertyPath: m_Bones.Array.data[0]
       value: 
@@ -206,13 +210,17 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 1711655344414578749}
-    - target: {fileID: 859094594, guid: 96daa78f26e45e94ea01193b4c9ce1d0, type: 3}
-      propertyPath: m_Name
-      value: embout
-      objectReference: {fileID: 0}
     - target: {fileID: 1878441617, guid: 96daa78f26e45e94ea01193b4c9ce1d0, type: 3}
       propertyPath: m_Name
       value: bout
+      objectReference: {fileID: 0}
+    - target: {fileID: 859094596, guid: 96daa78f26e45e94ea01193b4c9ce1d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878441619, guid: 96daa78f26e45e94ea01193b4c9ce1d0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96daa78f26e45e94ea01193b4c9ce1d0, type: 3}
@@ -407,26 +415,6 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3304152119558847689, guid: 83311482a0e604049a41644e1636a687,
-        type: 3}
-      propertyPath: prewarm
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3304152119558847689, guid: 83311482a0e604049a41644e1636a687,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3304152118735428360, guid: 83311482a0e604049a41644e1636a687,
-        type: 3}
-      propertyPath: prewarm
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3304152118735428360, guid: 83311482a0e604049a41644e1636a687,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3304152120058984434, guid: 83311482a0e604049a41644e1636a687,
         type: 3}
       propertyPath: prewarm
@@ -437,12 +425,32 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3304152119558847689, guid: 83311482a0e604049a41644e1636a687,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3304152119558847689, guid: 83311482a0e604049a41644e1636a687,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3304152118841578642, guid: 83311482a0e604049a41644e1636a687,
         type: 3}
       propertyPath: prewarm
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3304152118841578642, guid: 83311482a0e604049a41644e1636a687,
+        type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3304152118735428360, guid: 83311482a0e604049a41644e1636a687,
+        type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3304152118735428360, guid: 83311482a0e604049a41644e1636a687,
         type: 3}
       propertyPath: playOnAwake
       value: 0
