@@ -7,7 +7,7 @@ public class SpawnObstacle : MonoBehaviour
 {
 
     [SerializeField] private Camera player1Camera, player2Camera;
-    [SerializeField] private CinemachineVirtualCamera virtualCamera;
+    private Camera firstCamera;
 
     // the obstacle struct holds data to spawn each obstacle
     [System.Serializable]
@@ -21,6 +21,10 @@ public class SpawnObstacle : MonoBehaviour
     [SerializeField] private ObstacleSpawn[] obstacles;
     private float spawnHeight;
     private Vector3 spawnPos;
+    private float furthestX;
+    private float playerY;
+
+
     private GameObject newObstacle;
     private int blackholesLayermask = 1 << 10;
     private int stationsLayermask = 1 << 11;
@@ -38,20 +42,26 @@ public class SpawnObstacle : MonoBehaviour
     {
         while (true)
         {
+            firstCamera = GetFirstCamera();
+
             #region Obstacle spawning for Player 1
             spawnHeight = Random.Range(-1f, 2f);
-            spawnPos = player1Camera.ViewportToWorldPoint(new Vector3(1.1f, spawnHeight, -player1Camera.transform.position.z));
+            // Get the x pos outside the viewport of the furthest player's camera
+            furthestX = firstCamera.ViewportToWorldPoint(new Vector3(1.1f, 0, 0)).x;
+            // Get the y pos in front of the current player
+            playerY = player1Camera.ViewportToWorldPoint(new Vector3(0f, spawnHeight, 0)).y;
+            spawnPos = new Vector3(furthestX, playerY, 0);
 
             if (obstacle.parent.name == "BlackHoles")
             {
-                if (Physics.OverlapSphere(spawnPos, 30, blackholesLayermask).Length == 0)
+                if (Physics.OverlapSphere(spawnPos, 30, blackholesLayermask).Length == 0 && Physics.OverlapSphere(spawnPos, 5, stationsLayermask).Length == 0)
                 {
                     newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
                 }
             }
             else if (obstacle.parent.name == "Stations")
             {
-                if (Physics.OverlapSphere(spawnPos, 30, stationsLayermask).Length == 0)
+                if (Physics.OverlapSphere(spawnPos, 30, stationsLayermask).Length == 0 && Physics.OverlapSphere(spawnPos, 5, blackholesLayermask).Length == 0)
                 {
                     newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
                 }
@@ -71,25 +81,36 @@ public class SpawnObstacle : MonoBehaviour
 
             #region Obstacle spawning for Player 2
             spawnHeight = Random.Range(-1f, 2f);
-            spawnPos = player2Camera.ViewportToWorldPoint(new Vector3(1.1f, spawnHeight, -player1Camera.transform.position.z));
+
+            // Get the x pos outside the viewport of the furthest player's camera
+            furthestX = firstCamera.ViewportToWorldPoint(new Vector3(1.1f, 0, 0)).x;
+            // Get the y pos in front of the current player
+            playerY = player1Camera.ViewportToWorldPoint(new Vector3(0f, spawnHeight, 0)).y;
+            spawnPos = new Vector3(furthestX, playerY, 0);
 
             if (obstacle.parent.name == "BlackHoles")
             {
-                if (Physics.OverlapSphere(spawnPos, 30, blackholesLayermask).Length == 0 && Physics.OverlapSphere(spawnPos, 20, stationsLayermask).Length == 0)
+                if (Physics.OverlapSphere(spawnPos, 30, blackholesLayermask).Length == 0 
+                    && Physics.OverlapSphere(spawnPos, 5, stationsLayermask).Length == 0
+                    && Physics.OverlapSphere(spawnPos, 5, spaceshipsLayermask).Length == 0)
                 {
                     newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
                 }
             }
             else if (obstacle.parent.name == "Stations")
             {
-                if (Physics.OverlapSphere(spawnPos, 30, stationsLayermask).Length == 0 && Physics.OverlapSphere(spawnPos, 20, blackholesLayermask).Length == 0)
+                if (Physics.OverlapSphere(spawnPos, 30, stationsLayermask).Length == 0 
+                    && Physics.OverlapSphere(spawnPos, 5, blackholesLayermask).Length == 0
+                    && Physics.OverlapSphere(spawnPos, 5, spaceshipsLayermask).Length == 0)
                 {
                     newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
                 }
             }
             else if (obstacle.parent.name == "SpaceShips")
             {
-                if (Physics.OverlapSphere(spawnPos, 10, spaceshipsLayermask).Length == 0)
+                if (Physics.OverlapSphere(spawnPos, 10, spaceshipsLayermask).Length == 0 
+                    && Physics.OverlapSphere(spawnPos, 5, stationsLayermask).Length == 0
+                    && Physics.OverlapSphere(spawnPos, 5, blackholesLayermask).Length == 0)
                 {
                     newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
                 }
@@ -104,5 +125,13 @@ public class SpawnObstacle : MonoBehaviour
 
             yield return new WaitForSeconds(obstacle.cooldown);
         }
+    }
+
+    private Camera GetFirstCamera()
+    {
+        if (player1Camera.transform.position.x > player2Camera.transform.position.y)
+            return player1Camera;
+        else
+            return player2Camera;
     }
 }
