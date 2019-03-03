@@ -81,13 +81,12 @@ public class IAVaisseaux : MonoBehaviour
         for (int i = 0; i <= 360; i += 5)
         {
             Vector3 destination = Quaternion.Euler(0, 0, i) * (new Vector3(0, maxDistanceDetection));
-            Debug.DrawRay(transform.position, destination);
 
             if (Physics.Raycast(transform.position, destination, out ray, maxDistanceDetection))
             {
                 if (ray.transform.tag == "Player" && isTheNearestPlayer(ray.transform.gameObject))
                 {
-                    angle = Vector3.SignedAngle((ray.transform.position - transform.position), /* Quaternion.Euler(0, 0, -90) * */ transform.right, new Vector3(0, 0, 1));
+                    angle = Vector3.SignedAngle((ray.transform.position - transform.position), transform.right, new Vector3(0, 0, 1));
                     torque.z = -angle;
                     torque.x = 0;
                     torque.y = 0;
@@ -138,11 +137,5 @@ public class IAVaisseaux : MonoBehaviour
         {
             return true;
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-        //Gizmos.DrawSphere(transform.position, 30);
     }
 }
