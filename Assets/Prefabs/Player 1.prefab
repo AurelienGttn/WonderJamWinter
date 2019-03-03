@@ -95,7 +95,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &992181858
 Transform:
   m_ObjectHideFlags: 0
@@ -296,7 +296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1406706323
 Transform:
   m_ObjectHideFlags: 0
@@ -391,10 +391,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fbb448f42a2a1b439dd9200735a69c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 15
   pression: 100
   isPlayer1: 1
   Smoke: {fileID: 1711655345746637632}
+  mashForce: 10
   sphere: {fileID: 1027808951}
   deathMenu: {fileID: 0}
 --- !u!65 &1711655344626839262

@@ -5,7 +5,7 @@ using UnityEngine;
 public class TrouNoir : MonoBehaviour
 {
     private float rayonAttraction = 10.0f;
-    [SerializeField] private float forceAttraction = 500f;
+    [SerializeField] private float forceAttraction = 1500f;
 
     private Collider[] objetProche;
 
@@ -36,6 +36,7 @@ public class TrouNoir : MonoBehaviour
         if (other.tag == "Player")
         {
             Debug.Log("Kill Player");
+            other.gameObject.GetComponent<playerMovement>().death();
         }
     }
 }
