@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class EndMenuHandler : MonoBehaviour
 {
@@ -7,13 +8,19 @@ public class EndMenuHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        StartCoroutine("updateRotation");
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public IEnumerator updateRotation()
     {
-        contenant.transform.Rotate(new Vector3(0, 0, -3));
-        contenant.transform.Rotate(new Vector3(0, 1, 0));
+        while (true)
+        {
+            contenant.transform.Rotate(new Vector3(0, 0, -3));
+            contenant.transform.Rotate(new Vector3(0, 1, 0));
+            yield return new WaitForSeconds(0.01f);
+
+        }
+
     }
 }
