@@ -28,11 +28,12 @@ public class MenuHandler : MonoBehaviour
     public void onClickbtn_Play()
     {
         GameObject score = GameObject.Find("Score");
-        if (score != null)
-        {
-            GameObject.DestroyImmediate(score);
-        }
+        //if (score != null)
+        //{
+        //    GameObject.DestroyImmediate(score);
+        //}
         SceneManager.LoadScene(1);
+        //SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
 
     }
 
@@ -68,12 +69,12 @@ public class MenuHandler : MonoBehaviour
 
     public IEnumerator menuToCredits()
     {
-       
-
-       // backButton.GetComponent<Button>().colors.normalColor.a(0);
 
 
-     //   Debug.Log(colorBlock.normalColor);
+        // backButton.GetComponent<Button>().colors.normalColor.a(0);
+
+
+        //   Debug.Log(colorBlock.normalColor);
         float a = 1;
         while (a >= 0)
         {

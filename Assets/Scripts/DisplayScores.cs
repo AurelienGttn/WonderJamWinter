@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 public class DisplayScores : MonoBehaviour
@@ -8,17 +6,45 @@ public class DisplayScores : MonoBehaviour
 
     private Score score;
 
-    private TextMeshProUGUI scoreText;
+    private TextMeshProUGUI scoreTextWinner;
+    private TextMeshProUGUI scoreTextLooser;
 
 
     void Start()
     {
+
+
         score = FindObjectOfType<Score>();
 
-        scoreText = GetComponent<TextMeshProUGUI>();
+        if (score == null)
+        {
+            return;
+        }
+        if (score.scoreP1 > score.scoreP2)
+        {
+            score.numberWinP1++;
+        }
+        else
+        {
+            score.numberWinP2++;
+        }
 
-        scoreText.text = "Player 1 score : " + Mathf.FloorToInt(score.scoreP1)
-            + "\nPlayer 2 score : " + Mathf.FloorToInt(score.scoreP2);
+        scoreTextWinner = GameObject.Find("text winner").GetComponent<TextMeshProUGUI>();
+        scoreTextLooser = GameObject.Find("text looser").GetComponent<TextMeshProUGUI>();
+
+
+        if (score.numberWinP1 > score.numberWinP2 || (score.numberWinP1 == score.numberWinP2 && score.scoreP1 > score.scoreP2))
+        {
+            scoreTextWinner.text = "Player 1 : " + score.numberWinP1 + "  victories    score : " + Mathf.FloorToInt(score.scoreP1);
+            scoreTextLooser.text = "Player 2 : " + score.numberWinP2 + "  victories    score : " + Mathf.FloorToInt(score.scoreP2);
+        }
+        else
+        {
+            scoreTextLooser.text = "Player 1 : " + score.numberWinP1 + "  victories    score : " + Mathf.FloorToInt(score.scoreP1);
+            scoreTextWinner.text = "Player 2 : " + score.numberWinP2 + "  victories    score : " + Mathf.FloorToInt(score.scoreP2);
+        }
+
+        Debug.Log("fin display" + score.numberWinP1 + "  " + score.numberWinP2);
     }
 
 
