@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1777959147}
   m_Layer: 0
   m_Name: meteorFull
-  m_TagString: Untagged
+  m_TagString: "Astero\xEFde"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

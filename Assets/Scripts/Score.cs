@@ -29,7 +29,7 @@ public class Score : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(numberWinP1 + "  " + numberWinP1);
+
         if (SceneManager.GetActiveScene().name == "Menu")
         {
             numberWinP1 = 0;
