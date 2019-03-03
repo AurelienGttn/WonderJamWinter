@@ -40,7 +40,6 @@ public class Asteroïde : MonoBehaviour
         else if (name.Contains("barrel"))
         {
             rbAsteroïde.AddForce(transform.forward * 50 * rbAsteroïde.mass);
-            transform.localScale = new Vector3(Random.Range(1f, 2f), Random.Range(1f, 2f), Random.Range(1f, 2f));
         }
     }
 
