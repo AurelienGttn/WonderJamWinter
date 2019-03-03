@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class TriggerFin : MonoBehaviour
@@ -15,7 +13,7 @@ public class TriggerFin : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player") && other.GetComponent<playerMovement>().enabled == true)
         {
             score.SetScores();
             SceneManager.LoadScene(NomLevel, LoadSceneMode.Single);
