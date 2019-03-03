@@ -115,7 +115,7 @@ public class SpawnObstacle : MonoBehaviour
             // Get the x pos outside the viewport of the furthest player's camera
             furthestX = firstCamera.ViewportToWorldPoint(new Vector3(1.1f, 0, 0)).x;
             // Get the y pos in front of the current player
-            playerY = player1.position.y + spawnHeight;
+            playerY = player2.position.y + spawnHeight;
             spawnPos = new Vector3(furthestX, playerY, 0);
 
             // For each static obstacle check if there is already the same obstacle in the area
