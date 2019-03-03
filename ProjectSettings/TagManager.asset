@@ -9,6 +9,7 @@ TagManager:
   - Station
   - FxTemporaire
   - EndOfRace
+  - CanDestroy
   layers:
   - Default
   - TransparentFX
