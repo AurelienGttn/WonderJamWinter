@@ -23,7 +23,10 @@ public class playerMovement : MonoBehaviour
 
     public GameObject deathMenu;
 
-    
+    private bool pushAsteroid = false;
+    private float timeToPush;
+    private bool isInCollision = false;
+    private Vector3 velocityBeforePush;
 
     // Start is called before the first frame update
     void Awake()
@@ -41,7 +44,20 @@ public class playerMovement : MonoBehaviour
         float moveHorizontal;
         float moveVertical;
         float force;
-        if(IsInputEnabled)
+
+        if (timeToPush > 0)
+        {
+            Debug.Log("Asteroid");
+            timeToPush -= Time.deltaTime;
+
+        }
+
+        if (!isInCollision)
+        {
+            velocityBeforePush = GetComponent<Rigidbody>().velocity;
+        }
+
+        if (IsInputEnabled)
         {
             if (isPlayer1)
             {
@@ -94,71 +110,71 @@ public class playerMovement : MonoBehaviour
 
             Vector3 orientation = new Vector3(moveHorizontal, moveVertical, 0.0f);
 
-        if (orientation.magnitude > limitMag)
-        {
-            if (orientation == new Vector3(-1, 0, 0))
+            if (orientation.magnitude > limitMag)
             {
-                transform.rotation = Quaternion.Euler(0, 0, 180.0f);
+                if (orientation == new Vector3(-1, 0, 0))
+                {
+                    transform.rotation = Quaternion.Euler(0, 0, 180.0f);
+                }
+                else
+                {
+                    transform.right = orientation;
+                }
+
+            }
+            if (force != 0.0/* && pression > 0*/)
+            {
+                pression = pression - force / 10;
+                rb.AddForce(force * transform.right * speed);
+                if (pression > 0)
+                {
+                    foreach (GameObject go in SmokeEffect)
+                    {
+                        ParticleSystem psystem = go.GetComponent<ParticleSystem>();
+                        if (!psystem.isPlaying)
+                        {
+                            psystem.loop = true;
+                            psystem.Play();
+                        }
+                    }
+                }
+                else
+                {
+                    SmokeEffect[0].GetComponent<ParticleSystem>().Play();
+                }
+
+
             }
             else
-            {
-                transform.right = orientation;
-            }
-
-        }
-        if (force != 0.0/* && pression > 0*/)
-        {
-            pression = pression - force / 10;
-            rb.AddForce(force * transform.right * speed);
-            if (pression > 0)
             {
                 foreach (GameObject go in SmokeEffect)
                 {
                     ParticleSystem psystem = go.GetComponent<ParticleSystem>();
-                    if (!psystem.isPlaying)
+                    if (psystem.isPlaying)
                     {
-                        psystem.loop = true;
-                        psystem.Play();
+                        psystem.loop = false;
                     }
                 }
             }
-            else
+            if (pression < 0)
             {
-                SmokeEffect[0].GetComponent<ParticleSystem>().Play();
+                pression = 0;
             }
 
-
-        }
-        else
-        {
-            foreach (GameObject go in SmokeEffect)
+            if (mustDie)
             {
-                ParticleSystem psystem = go.GetComponent<ParticleSystem>();
-                if (psystem.isPlaying)
-                {
-                    psystem.loop = false;
-                }
+                //gameObject.SetActive(false);
+                GetComponent<Rigidbody>().freezeRotation = false;
+                GetComponent<Rigidbody>().angularDrag = 0;
+                GetComponent<Rigidbody>().drag = 0;
+                GetComponent<Rigidbody>().AddTorque(10, 10, 10);
+                StartCoroutine("canvasDeath");
+                gameObject.GetComponent<playerMovement>().enabled = false;
             }
         }
-        if (pression < 0)
-        {
-            pression = 0;
-        }
-
-        if (mustDie)
-        {
-            //gameObject.SetActive(false);
-            GetComponent<Rigidbody>().freezeRotation = false;
-            GetComponent<Rigidbody>().angularDrag = 0;
-            GetComponent<Rigidbody>().drag = 0;
-            GetComponent<Rigidbody>().AddTorque(10, 10, 10);
-            StartCoroutine("canvasDeath");
-            gameObject.GetComponent<playerMovement>().enabled = false;
-        }
-        }
 
 
-        
+
 
     }
 
@@ -197,5 +213,38 @@ public class playerMovement : MonoBehaviour
         Gizmos.color = Color.yellow;
         Vector3 offset = new Vector3(80, 0, 0);
         //Gizmos.DrawSphere(transform.position + offset, 30);
+    }
+
+    public void pushAsteroids(float time)
+    {
+        pushAsteroid = true;
+        timeToPush = time;
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        isInCollision = true;
+        if (timeToPush > 0 && pushAsteroid)
+        {
+            Rigidbody asterRigid = collision.gameObject.GetComponent<Rigidbody>();
+            if (collision.gameObject.tag == "Asteroïde" && asterRigid != null)
+            {
+                asterRigid.velocity = velocityBeforePush * (asterRigid.velocity.magnitude / velocityBeforePush.magnitude);
+            }
+
+        }
+    }
+
+    public void OnCollisionExit(Collision collision)
+    {
+        if (timeToPush > 0 && pushAsteroid)
+        {
+            if (collision.gameObject.tag == "Asteroïde")
+            {
+                GetComponent<Rigidbody>().velocity = velocityBeforePush;
+            }
+
+        }
+        isInCollision = false;
     }
 }
