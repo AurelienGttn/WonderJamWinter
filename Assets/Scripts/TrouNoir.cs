@@ -5,7 +5,7 @@ using UnityEngine;
 public class TrouNoir : MonoBehaviour
 {
     private float rayonAttraction = 10.0f;
-    [SerializeField] private float forceAttraction = 500f;
+    [SerializeField] private float forceAttraction = 1500f;
 
     private Collider[] objetProche;
 
