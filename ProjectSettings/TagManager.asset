@@ -20,13 +20,13 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - Blockers
+  - MovingObstacles
   - Blackholes
   - Stations
   - Spaceships
   - P1Cam
   - P2Cam
-  - 
+  - Bumpers
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Demarrage
+    uniqueID: 734864913
     locked: 0

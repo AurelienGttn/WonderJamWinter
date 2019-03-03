@@ -51,26 +51,35 @@ public class Decompte : MonoBehaviour
 
     IEnumerator ExplodeBulle(Image bulle) 
     {   
-        GameObject effets =  bulle.transform.Find("CFX_Poof").gameObject;
-        effets.SetActive(true);
-        ParticleSystem ps =   effets.GetComponent<ParticleSystem>();
-        ps.Play();
+        
         yield return new WaitForSeconds(1);
         if(bulle == Bulle1)
         {
+            GameObject effets =  bulle.transform.Find("CFX_Poof").gameObject;
+            effets.SetActive(true);
+            ParticleSystem ps =   effets.GetComponent<ParticleSystem>();
             GetComponent<AudioSource>().enabled = true; 
             this.bulle1explode = true;
+            ps.Play();
             Destroy(Bulle1);
         }
         else if(bulle == Bulle2)
         {
+            GameObject effets =  bulle.transform.Find("CFX_Poof").gameObject;
+            effets.SetActive(true);
+            ParticleSystem ps =   effets.GetComponent<ParticleSystem>();
             this.bulle2explode = true;
+             ps.Play();
             Destroy(Bulle2);
         }
         else if(bulle == Bulle3)
         {
+            GameObject effets =  bulle.transform.Find("CFX_Poof").gameObject;
+            effets.SetActive(true);
+            ParticleSystem ps =   effets.GetComponent<ParticleSystem>();
             this.bulle3explode = true;
             Destroy(Bulle3);
+             ps.Play();
             playerMovement.IsInputEnabled = true;
         }
       
