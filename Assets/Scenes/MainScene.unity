@@ -925,6 +925,11 @@ PrefabInstance:
       propertyPath: iconsJ2
       value: 
       objectReference: {fileID: 1441786482}
+    - target: {fileID: 4415660932843089193, guid: 5112045a66dca7e449641256379019a3,
+        type: 3}
+      propertyPath: mashForce
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1265257779, guid: 5112045a66dca7e449641256379019a3, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1996,6 +2001,11 @@ PrefabInstance:
       propertyPath: iconsJ2
       value: 
       objectReference: {fileID: 1441786482}
+    - target: {fileID: 1711655344626839263, guid: dfc9ff7c7447284448a1e3bcaa9c047d,
+        type: 3}
+      propertyPath: mashForce
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1711655344626839260, guid: dfc9ff7c7447284448a1e3bcaa9c047d,
         type: 3}
       propertyPath: m_LocalPosition.x

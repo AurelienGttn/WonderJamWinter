@@ -15,7 +15,7 @@ public class playerMovement : MonoBehaviour
 
 	private Rigidbody rb;
 	private float limitMag = 0.3f;
-	[SerializeField] private float mashForce = 10.0f;
+	[SerializeField] private float mashForce = 7.5f;
 
 	private bool mustDie = false;
 	public static bool IsInputEnabled = false;
