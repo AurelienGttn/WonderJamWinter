@@ -438,7 +438,7 @@ MonoBehaviour:
   maxVelocity: 5
   laser: {fileID: 5560061754511373923, guid: 0a4fccc48ec3c6b42acb78c48deec88c, type: 3}
   laserParent: {fileID: 2704288261175662961}
-  laserVelocity: 10
+  laserVelocity: 15
 --- !u!1 &5937101382249357550
 GameObject:
   m_ObjectHideFlags: 0

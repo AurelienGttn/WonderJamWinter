@@ -40,7 +40,7 @@ public class ItemInvulnerabilite : MonoBehaviour, Items
 
         if (isPlayer1 && player1First)
         {
-            invulnerabiliteTime = 2; 
+            invulnerabiliteTime = 3.5f; 
             invulnerabiliteJ1.SetActive(true);
             isInvulnerable = true; 
             StartCoroutine(TimeInvulnerabilite(invulnerabiliteJ1)); 
@@ -49,7 +49,7 @@ public class ItemInvulnerabilite : MonoBehaviour, Items
         if (isPlayer1 && !player1First)
         {
 
-            invulnerabiliteTime = 5;
+            invulnerabiliteTime = 7f;
             invulnerabiliteJ1.SetActive(true);
             isInvulnerable = true;
             StartCoroutine(TimeInvulnerabilite(invulnerabiliteJ1));
@@ -57,7 +57,7 @@ public class ItemInvulnerabilite : MonoBehaviour, Items
 
         if (!isPlayer1 && !player1First)
         {
-            invulnerabiliteTime = 2;
+            invulnerabiliteTime = 3.5f;
             invulnerabiliteJ2.SetActive(true);
             isInvulnerable = true;
             StartCoroutine(TimeInvulnerabilite(invulnerabiliteJ2));
@@ -65,7 +65,7 @@ public class ItemInvulnerabilite : MonoBehaviour, Items
 
         if (!isPlayer1 && player1First)
         {
-            invulnerabiliteTime = 5;
+            invulnerabiliteTime = 7f;
             invulnerabiliteJ2.SetActive(true);
             isInvulnerable = true;
             StartCoroutine(TimeInvulnerabilite(invulnerabiliteJ2));

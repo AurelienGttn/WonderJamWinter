@@ -117,7 +117,7 @@ public class playerMovement : MonoBehaviour
 
 			}
 			if (force != 0.0/* && pression > 0*/) {
-				pression = pression - force / 10;
+				pression = pression - force / 8;
 				rb.AddForce(force * transform.right * speed);
 				if (pression > 0) {
 					foreach (GameObject go in SmokeEffect) {

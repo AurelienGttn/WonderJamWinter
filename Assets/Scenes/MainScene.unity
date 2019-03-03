@@ -1321,7 +1321,7 @@ PrefabInstance:
     - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
         type: 3}
       propertyPath: obstacles.Array.data[5].cooldown
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
         type: 3}
@@ -1337,13 +1337,18 @@ PrefabInstance:
     - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
         type: 3}
       propertyPath: obstacles.Array.data[5].cooldown
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
         type: 3}
       propertyPath: obstacles.Array.data[5].parent
       value: 
       objectReference: {fileID: 634502301}
+    - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
+        type: 3}
+      propertyPath: timeBeforeSpawn
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8135c242ede5294cbd2ad193cac40df, type: 3}
 --- !u!1 &1111212321
@@ -1819,6 +1824,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 479885905227726734, guid: acb835efca80ec341b06fa02b304977d,
+        type: 3}
+      propertyPath: duration
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 70251614, guid: acb835efca80ec341b06fa02b304977d, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1850,6 +1860,46 @@ PrefabInstance:
     - target: {fileID: 1445792783, guid: acb835efca80ec341b06fa02b304977d, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 353153291641092130, guid: acb835efca80ec341b06fa02b304977d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -80
+      objectReference: {fileID: 0}
+    - target: {fileID: 353153291641092141, guid: acb835efca80ec341b06fa02b304977d,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 353153291641092141, guid: acb835efca80ec341b06fa02b304977d,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 353153291641092141, guid: acb835efca80ec341b06fa02b304977d,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 353153291116443260, guid: acb835efca80ec341b06fa02b304977d,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.78431374
+      objectReference: {fileID: 0}
+    - target: {fileID: 353153291116443260, guid: acb835efca80ec341b06fa02b304977d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 353153291116443260, guid: acb835efca80ec341b06fa02b304977d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 353153291116443260, guid: acb835efca80ec341b06fa02b304977d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acb835efca80ec341b06fa02b304977d, type: 3}
