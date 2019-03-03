@@ -74,9 +74,9 @@ public class Score : MonoBehaviour
 
     public void SetScores()
     {
-        if (p1IsDead)
+        if (!p1IsDead)
             scoreP1 = player1.position.x;
-        if (p2IsDead)
+        if (!p2IsDead)
             scoreP2 = player2.position.x;
     }
 }
