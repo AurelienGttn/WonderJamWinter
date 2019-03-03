@@ -16,13 +16,14 @@ public class Bumper : MonoBehaviour
     {
         
     }
-
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        if (other.CompareTag("Player"))
+        if (other.collider.CompareTag("Player"))
         {
-            rbPlayer = other.GetComponent<Rigidbody>();
-            rbPlayer.velocity = -rbPlayer.velocity;
+            GetComponent<AudioSource>().Play(); 
+            rbPlayer = other.collider.GetComponent<Rigidbody>();
+            rbPlayer.velocity = -rbPlayer.velocity * 2.0f;
         }
     }
+   
 }
