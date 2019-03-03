@@ -19,6 +19,7 @@ public class Decompte : MonoBehaviour
         bulle1explode = false;
         bulle2explode = false;
         bulle3explode = false;
+       
     }
 
     // Update is called once per frame
@@ -57,6 +58,7 @@ public class Decompte : MonoBehaviour
         yield return new WaitForSeconds(1);
         if(bulle == Bulle1)
         {
+            GetComponent<AudioSource>().enabled = true; 
             this.bulle1explode = true;
             Destroy(Bulle1);
         }
