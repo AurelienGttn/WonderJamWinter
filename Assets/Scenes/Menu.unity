@@ -578,7 +578,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'Objecitve :'
+  m_text: 'Objective:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -648,9 +648,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 2.034607, w: 0}
   m_textInfo:
     textComponent: {fileID: 273031764}
-    characterCount: 11
+    characterCount: 10
     spriteCount: 0
-    spaceCount: 1
+    spaceCount: 0
     wordCount: 1
     linkCount: 0
     lineCount: 1
@@ -1587,7 +1587,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "Direction : \n\nPropulsion :\n\nEmergency move :\n\nClosest station :"
+  m_text: "Direction: \n\nPropulsion:\n\nEmergency move:\n\nClosest station:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1634,7 +1634,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 45
+  m_firstOverflowCharacterIndex: 42
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1657,9 +1657,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 531944306}
-    characterCount: 63
+    characterCount: 59
     spriteCount: 0
-    spaceCount: 13
+    spaceCount: 9
     wordCount: 6
     linkCount: 0
     lineCount: 7
@@ -2098,7 +2098,9 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Go to the ship indicated by the arrow0.
+  m_text: 'Go to the ship indicated by the
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2168,10 +2170,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -385.68094, w: 0}
   m_textInfo:
     textComponent: {fileID: 863415474}
-    characterCount: 39
+    characterCount: 32
     spriteCount: 0
     spaceCount: 7
-    wordCount: 8
+    wordCount: 7
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -2985,7 +2987,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -45.6, y: 11.038307}
+  m_AnchoredPosition: {x: 27.3, y: 11.038307}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1209314694
@@ -4771,7 +4773,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "Flou: \n\nInvulnerability :\n\nLow pressure :\n\nNo repulse :"
+  m_text: "Bloom: \n\nInvulnerability:\n\nLow pressure:\n\nNo repulse:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4818,7 +4820,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 42
+  m_firstOverflowCharacterIndex: 41
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -4841,9 +4843,9 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2052949034}
-    characterCount: 55
+    characterCount: 53
     spriteCount: 0
-    spaceCount: 12
+    spaceCount: 9
     wordCount: 6
     linkCount: 0
     lineCount: 7
