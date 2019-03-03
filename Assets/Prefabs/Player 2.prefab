@@ -96,7 +96,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1103464735
 Transform:
   m_ObjectHideFlags: 0
@@ -126,7 +126,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103464734}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -172,7 +172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1265257780
 Transform:
   m_ObjectHideFlags: 0
@@ -297,7 +297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1849885749
 Transform:
   m_ObjectHideFlags: 0
@@ -391,10 +391,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fbb448f42a2a1b439dd9200735a69c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 15
   pression: 100
   isPlayer1: 0
   Smoke: {fileID: 4415660933837189302}
+  mashForce: 10
   sphere: {fileID: 1103464734}
   deathMenu: {fileID: 0}
 --- !u!65 &4415660932843089192

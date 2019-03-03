@@ -5,6 +5,7 @@ public class laser : MonoBehaviour
     public Vector3 velocity;
     private Rigidbody laserRigidbody;
     private bool mustDie = false;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,8 @@ public class laser : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+
+            
             collision.gameObject.GetComponent<playerMovement>().death();
 
         }
