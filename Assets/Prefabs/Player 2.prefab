@@ -353,7 +353,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4415660932843089196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5, z: 0}
+  m_LocalPosition: {x: 0, y: -25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4415660934254644441}
@@ -395,6 +395,7 @@ MonoBehaviour:
   pression: 100
   isPlayer1: 0
   Smoke: {fileID: 4415660933837189302}
+  mashForce: 10
   sphere: {fileID: 1103464734}
   deathMenu: {fileID: 0}
 --- !u!65 &4415660932843089192
