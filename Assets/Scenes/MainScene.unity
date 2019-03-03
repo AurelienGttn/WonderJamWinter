@@ -1768,7 +1768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1186042795, guid: acb835efca80ec341b06fa02b304977d, type: 3}
       propertyPath: m_Name
-      value: InvulneabiliteJ1
+      value: InvulnerabiliteJ1
       objectReference: {fileID: 0}
     - target: {fileID: 1186042795, guid: acb835efca80ec341b06fa02b304977d, type: 3}
       propertyPath: m_IsActive
@@ -1800,7 +1800,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1445792781, guid: acb835efca80ec341b06fa02b304977d, type: 3}
       propertyPath: m_Name
-      value: InvulneabiliteJ2
+      value: InvulnerabiliteJ2
       objectReference: {fileID: 0}
     - target: {fileID: 1445792781, guid: acb835efca80ec341b06fa02b304977d, type: 3}
       propertyPath: m_IsActive
