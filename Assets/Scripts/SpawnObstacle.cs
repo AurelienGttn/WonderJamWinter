@@ -58,7 +58,7 @@ public class SpawnObstacle : MonoBehaviour
             }
             else if (obstacle.parent.name == "SpaceShips")
             {
-                if (Physics.OverlapSphere(spawnPos, 15, spaceshipsLayermask).Length == 0)
+                if (Physics.OverlapSphere(spawnPos, 30, spaceshipsLayermask).Length == 0)
                 {
                     newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
                 }
@@ -75,14 +75,14 @@ public class SpawnObstacle : MonoBehaviour
 
             if (obstacle.parent.name == "BlackHoles")
             {
-                if (Physics.OverlapSphere(spawnPos, 30, blackholesLayermask).Length == 0)
+                if (Physics.OverlapSphere(spawnPos, 30, blackholesLayermask).Length == 0 && Physics.OverlapSphere(spawnPos, 20, stationsLayermask).Length == 0)
                 {
                     newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
                 }
             }
             else if (obstacle.parent.name == "Stations")
             {
-                if (Physics.OverlapSphere(spawnPos, 30, stationsLayermask).Length == 0)
+                if (Physics.OverlapSphere(spawnPos, 30, stationsLayermask).Length == 0 && Physics.OverlapSphere(spawnPos, 20, blackholesLayermask).Length == 0)
                 {
                     newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
                 }
