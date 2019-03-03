@@ -14,7 +14,7 @@ public class playerMovement : MonoBehaviour
 
     private Rigidbody rb;
     private float limitMag = 0.3f;
-    private float mashForce = 10.0f;
+    [SerializeField] private float mashForce = 10.0f;
 
     private bool mustDie = false;
 
@@ -157,7 +157,6 @@ public class playerMovement : MonoBehaviour
     {
         mustDie = true;
         sphere.SetActive(true);
-
     }
 
 
@@ -178,5 +177,13 @@ public class playerMovement : MonoBehaviour
             a += 0.05f;
         }
 
+    }
+
+    private void OnDrawGizmos()
+    {
+
+        Gizmos.color = Color.yellow;
+        Vector3 offset = new Vector3(80, 0, 0);
+        Gizmos.DrawSphere(transform.position + offset, 30);
     }
 }

@@ -32,15 +32,23 @@ public class SpawnObstacle : MonoBehaviour
 
     private IEnumerator Spawn(ObstacleSpawn obstacle)
     {
-        spawnHeight = Random.Range(0f, 1f);
+        spawnHeight = Random.Range(-2f, 3f);
         
         firstCamera = GetFirstCamera();
         spawnPos = firstCamera.ViewportToWorldPoint(new Vector3(1.1f, spawnHeight, -firstCamera.GetComponent<CameraMouvement>().offsetZ));
 
-        newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
+        if (Physics.CheckSphere(spawnPos, 30) && (obstacle.parent.name == "BlackHoles" || obstacle.parent.name == "Stations"))
+        {
+            StartCoroutine(Spawn(obstacle));
+            yield return null;
+        }
+        else
+        {
+            newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
 
-        yield return new WaitForSeconds(obstacle.cooldown);
-        StartCoroutine(Spawn(obstacle));
+            yield return new WaitForSeconds(obstacle.cooldown);
+            StartCoroutine(Spawn(obstacle));
+        }
     }
 
     private Camera GetFirstCamera()
