@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SpawnObstacle : MonoBehaviour
 {
+    [SerializeField] private float timeBeforeSpawn = 5f;
 
     private Camera player1Camera, player2Camera;
     private Transform player1, player2;
@@ -87,7 +88,8 @@ public class SpawnObstacle : MonoBehaviour
             {
                 if (Physics.OverlapSphere(spawnPos, 10, spaceshipsLayermask).Length == 0
                     && Physics.OverlapSphere(spawnPos, 5, blackholesLayermask).Length == 0
-                    && Physics.OverlapSphere(spawnPos, 5, stationsLayermask).Length == 0)
+                    && Physics.OverlapSphere(spawnPos, 5, stationsLayermask).Length == 0
+                    && Physics.OverlapSphere(spawnPos, 5, movingObstaclesLayermask).Length == 0)
                 {
                     newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
                 }
@@ -146,7 +148,8 @@ public class SpawnObstacle : MonoBehaviour
             {
                 if (Physics.OverlapSphere(spawnPos, 10, spaceshipsLayermask).Length == 0
                     && Physics.OverlapSphere(spawnPos, 5, stationsLayermask).Length == 0
-                    && Physics.OverlapSphere(spawnPos, 5, blackholesLayermask).Length == 0)
+                    && Physics.OverlapSphere(spawnPos, 5, blackholesLayermask).Length == 0
+                    && Physics.OverlapSphere(spawnPos, 5, movingObstaclesLayermask).Length == 0)
                 {
                     newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
                 }
@@ -184,7 +187,7 @@ public class SpawnObstacle : MonoBehaviour
 
     private IEnumerator WaitBeforeSpawning()
     {
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(timeBeforeSpawn);
 
         foreach (ObstacleSpawn obstacle in obstacles)
         {

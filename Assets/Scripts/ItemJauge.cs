@@ -42,29 +42,29 @@ public class ItemJauge : MonoBehaviour, Items
 
         if (isPlayer1 && player1First)
         {
-            malus = 10.0f;
+            malus = 15.0f;
             player2.GetComponent<playerMovement>().pression -= malus;
         }
 
         else if (isPlayer1 && !player1First)
         {
-            malus = 30.0f;
+            malus = 35.0f;
             player2.GetComponent<playerMovement>().pression -= malus;
         }
 
         if(!isPlayer1 && !player1First)
         {
-            malus = 10.0f;
+            malus = 15.0f;
             player1.GetComponent<playerMovement>().pression -= malus;
         }
 
         if (!isPlayer1 && player1First)
         {
-            malus = 30.0f;
+            malus = 35.0f;
             player1.GetComponent<playerMovement>().pression -= malus;
         }
 
-      
+		Destroy(this);
 
     }
 }

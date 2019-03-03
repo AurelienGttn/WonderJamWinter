@@ -51,25 +51,25 @@ public class ItemFlouJoueur : MonoBehaviour, Items
 
         if (isPlayer1 && player1First)
         {
-            flouTimer = 2.0f;
+            flouTimer = 3.5f;
             isPlayer1Cible = false;
         }
 
         else if (isPlayer1 && !player1First)
         {
-            flouTimer = 5.0f;
+            flouTimer = 7.0f;
             isPlayer1Cible = false;
         }
 
         if (!isPlayer1 && !player1First)
         {
-            flouTimer = 2.0f;
+            flouTimer = 3.5f;
             isPlayer1Cible = true;
         }
 
         if (!isPlayer1 && player1First)
         {
-            flouTimer = 5.0f;
+            flouTimer = 7.0f;
             isPlayer1Cible = true;
         }
         
@@ -95,7 +95,6 @@ public class ItemFlouJoueur : MonoBehaviour, Items
     IEnumerator Timer(float time, bool isPlayer1)
     {
         yield return new WaitForSeconds(time);
-        Debug.Log("TEST ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;");
         if(isPlayer1)
         {
             BloomModel.Settings bloomTempSet = p1PPP.bloom.settings;
@@ -107,6 +106,7 @@ public class ItemFlouJoueur : MonoBehaviour, Items
             bloomTempSet.bloom.intensity = 0.91f;
             p2PPP.bloom.settings = bloomTempSet;
         }
+		Destroy(this);
     }
     
 }
