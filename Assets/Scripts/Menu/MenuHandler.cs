@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuHandler : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class MenuHandler : MonoBehaviour
     public GameObject backButton;
     public GameObject backButton2;
 
+    public Button test;
 
 
     public void Start()
@@ -66,7 +68,12 @@ public class MenuHandler : MonoBehaviour
 
     public IEnumerator menuToCredits()
     {
+       
 
+       // backButton.GetComponent<Button>().colors.normalColor.a(0);
+
+
+     //   Debug.Log(colorBlock.normalColor);
         float a = 1;
         while (a >= 0)
         {
@@ -79,6 +86,10 @@ public class MenuHandler : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
         canvasCredits.SetActive(true);
+
+        ColorBlock colorBlock = backButton.GetComponent<Button>().colors;
+        colorBlock.normalColor = new Color(0, 0, 0, 101);
+        backButton.GetComponent<Button>().colors = colorBlock;
         setAlphaObject(canvasCredits, 0);
         while (a <= 1)
         {
