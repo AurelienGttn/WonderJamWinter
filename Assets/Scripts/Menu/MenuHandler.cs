@@ -75,31 +75,33 @@ public class MenuHandler : MonoBehaviour
 
 
         //   Debug.Log(colorBlock.normalColor);
-        float a = 1;
-        while (a >= 0)
-        {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(canvasMenu, a);
-            a -= 0.05f;
-        }
+        //float a = 1;
+        //while (a >= 0)
+        //{
+        //    yield return new WaitForSeconds(0.01f);
+        //    setAlphaObject(canvasMenu, a);
+        //    a -= 0.05f;
+        //}
+        //canvasMenu.SetActive(false);
         canvasMenu.SetActive(false);
-
+  canvasCredits.SetActive(true);
 
         yield return new WaitForSeconds(0.5f);
-        canvasCredits.SetActive(true);
-
-        ColorBlock colorBlock = backButton.GetComponent<Button>().colors;
-        colorBlock.normalColor = new Color(0, 0, 0, 101);
-        backButton.GetComponent<Button>().colors = colorBlock;
-        setAlphaObject(canvasCredits, 0);
-        while (a <= 1)
-        {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(canvasCredits, a);
-            a += 0.05f;
-        }
+      
 
 
+        //Sprite image;
+     
+        //backButton.GetComponent<Button>().colors = colorBlock;
+        //setAlphaObject(canvasCredits, 0);
+        //while (a <= 1)
+        //{
+        //    yield return new WaitForSeconds(0.01f);
+        //    setAlphaObject(canvasCredits, a);
+        //    a += 0.05f;
+        //}
+
+ 
 
 
 
@@ -109,27 +111,10 @@ public class MenuHandler : MonoBehaviour
     public IEnumerator menuToIntructions()
     {
 
-        float a = 1;
-        while (a >= 0)
-        {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(canvasMenu, a);
-            a -= 0.05f;
-        }
+   
         canvasMenu.SetActive(false);
-
-
-        yield return new WaitForSeconds(0.5f);
         canvasIntruction.SetActive(true);
-        setAlphaObject(canvasIntruction, 0);
-        while (a <= 1)
-        {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(canvasIntruction, a);
-            a += 0.05f;
-        }
-
-
+        yield return new WaitForSeconds(0.5f);
 
 
 
@@ -138,26 +123,10 @@ public class MenuHandler : MonoBehaviour
     public IEnumerator creditsToMenu()
     {
 
-        float a = 1;
-        while (a >= 0)
-        {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(canvasCredits, a);
-            a -= 0.05f;
-        }
+
         canvasCredits.SetActive(false);
-
-
-
-        yield return new WaitForSeconds(0.5f);
         canvasMenu.SetActive(true);
-        setAlphaObject(canvasMenu, 0);
-        while (a <= 1)
-        {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(canvasMenu, a);
-            a += 0.05f;
-        }
+        yield return new WaitForSeconds(0.5f);
 
     }
 
@@ -165,25 +134,11 @@ public class MenuHandler : MonoBehaviour
     public IEnumerator IntructionToMenu()
     {
 
-        float a = 1;
-        while (a >= 0)
-        {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(canvasIntruction, a);
-            a -= 0.05f;
-        }
+     
         canvasIntruction.SetActive(false);
-
-        yield return new WaitForSeconds(0.5f);
         canvasMenu.SetActive(true);
-        setAlphaObject(canvasMenu, 0);
-        while (a <= 1)
-        {
-            yield return new WaitForSeconds(0.01f);
-            setAlphaObject(canvasMenu, a);
-            a += 0.05f;
-        }
-
+        yield return new WaitForSeconds(0.5f);
+    
 
     }
 
