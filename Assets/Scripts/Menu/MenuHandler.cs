@@ -25,6 +25,11 @@ public class MenuHandler : MonoBehaviour
 
     public void onClickbtn_Play()
     {
+        GameObject score = GameObject.Find("Score");
+        if (score != null)
+        {
+            GameObject.DestroyImmediate(score);
+        }
         SceneManager.LoadScene(1);
 
     }
