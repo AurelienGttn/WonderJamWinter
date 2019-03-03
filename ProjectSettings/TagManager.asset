@@ -20,13 +20,13 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - Blockers
+  - MovingObstacles
   - Blackholes
   - Stations
   - Spaceships
   - P1Cam
   - P2Cam
-  - 
+  - Bumpers
   - 
   - 
   - 

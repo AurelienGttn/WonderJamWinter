@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1044981206}
   - component: {fileID: 1044981208}
   - component: {fileID: 1044981207}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: SplitMetalBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,10 +88,10 @@ GameObject:
   - component: {fileID: 1509885576}
   - component: {fileID: 1509885575}
   - component: {fileID: 1509885578}
-  - component: {fileID: 1509885577}
   - component: {fileID: 1509885574}
   - component: {fileID: 5949602484279738951}
-  m_Layer: 0
+  - component: {fileID: 2547234751243272584}
+  m_Layer: 15
   m_Name: Bumper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,19 +145,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!65 &1509885577
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509885573}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1509885574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,3 +253,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!135 &2547234751243272584
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509885573}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
