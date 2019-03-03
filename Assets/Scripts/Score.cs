@@ -37,7 +37,9 @@ public class Score : MonoBehaviour
 
     public void SetScores()
     {
-        scoreP1 = player1.position.x;
-        scoreP2 = player2.position.x;
+        if (player1.gameObject.GetComponent<playerMovement>().enabled == true)
+            scoreP1 = player1.position.x;
+        if (player2.gameObject.GetComponent<playerMovement>().enabled == true)
+            scoreP2 = player2.position.x;
     }
 }
