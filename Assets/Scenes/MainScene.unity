@@ -684,6 +684,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreP1: 0
   scoreP2: 0
+  numberWinP1: 0
+  numberWinP2: 0
 --- !u!4 &440514531
 Transform:
   m_ObjectHideFlags: 0
@@ -1914,6 +1916,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5318060881694774508, guid: acb835efca80ec341b06fa02b304977d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5318060882745837943, guid: acb835efca80ec341b06fa02b304977d,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805808263710008706, guid: acb835efca80ec341b06fa02b304977d,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acb835efca80ec341b06fa02b304977d, type: 3}
