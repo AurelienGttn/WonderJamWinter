@@ -677,7 +677,7 @@ PrefabInstance:
     - target: {fileID: 4637887294802815586, guid: 1216a7d1e735ef04fac32eac6561adb2,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.525
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 4637887294802815586, guid: 1216a7d1e735ef04fac32eac6561adb2,
         type: 3}
@@ -733,7 +733,7 @@ PrefabInstance:
     - target: {fileID: 6345338572017334782, guid: e1b2cfb558023504a928a77df71def41,
         type: 3}
       propertyPath: m_NormalizedViewPortRect.y
-      value: -0.525
+      value: -0.53
       objectReference: {fileID: 0}
     - target: {fileID: 6345338572017334782, guid: e1b2cfb558023504a928a77df71def41,
         type: 3}
@@ -1502,7 +1502,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1231301618}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1216434494 stripped
 MonoBehaviour:
@@ -1547,8 +1547,9 @@ Transform:
   - {fileID: 634502301}
   - {fileID: 1111212322}
   - {fileID: 901846491}
-  - {fileID: 1158975139}
+  - {fileID: 1865446157}
   - {fileID: 1822051240}
+  - {fileID: 1158975139}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
