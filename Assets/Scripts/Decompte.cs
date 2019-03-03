@@ -53,7 +53,7 @@ public class Decompte : MonoBehaviour
     {   
         
         yield return new WaitForSeconds(1);
-        if(bulle == Bulle1)
+        if(bulle == Bulle1 && !bulle1explode)
         {
             GameObject effets =  bulle.transform.Find("CFX_Poof").gameObject;
             effets.SetActive(true);
@@ -63,7 +63,7 @@ public class Decompte : MonoBehaviour
             ps.Play();
             Destroy(Bulle1);
         }
-        else if(bulle == Bulle2)
+        else if(bulle == Bulle2 && !bulle2explode)
         {
             GameObject effets =  bulle.transform.Find("CFX_Poof").gameObject;
             effets.SetActive(true);
@@ -72,7 +72,7 @@ public class Decompte : MonoBehaviour
              ps.Play();
             Destroy(Bulle2);
         }
-        else if(bulle == Bulle3)
+        else if(bulle == Bulle3 && !bulle3explode)
         {
             GameObject effets =  bulle.transform.Find("CFX_Poof").gameObject;
             effets.SetActive(true);
