@@ -47,3 +47,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Demarrage
+    uniqueID: 734864913
+    locked: 0
