@@ -39,7 +39,7 @@ public class playerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float moveHorizontal;
         float moveVertical;

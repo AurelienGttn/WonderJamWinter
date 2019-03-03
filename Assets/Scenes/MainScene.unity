@@ -682,7 +682,7 @@ PrefabInstance:
     - target: {fileID: 4637887294802815586, guid: 1216a7d1e735ef04fac32eac6561adb2,
         type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 16151
+      value: 16183
       objectReference: {fileID: 0}
     - target: {fileID: 1057620647, guid: 1216a7d1e735ef04fac32eac6561adb2, type: 3}
       propertyPath: m_ShowCameraFrustum
@@ -738,7 +738,7 @@ PrefabInstance:
     - target: {fileID: 6345338572017334782, guid: e1b2cfb558023504a928a77df71def41,
         type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 24343
+      value: 24375
       objectReference: {fileID: 0}
     - target: {fileID: 6345338572017334776, guid: e1b2cfb558023504a928a77df71def41,
         type: 3}
@@ -2101,7 +2101,7 @@ PrefabInstance:
     - target: {fileID: 2748327689395462120, guid: 7ef5327d40a3ef541ae5188d996b54f1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 500
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 2748327689395462120, guid: 7ef5327d40a3ef541ae5188d996b54f1,
         type: 3}

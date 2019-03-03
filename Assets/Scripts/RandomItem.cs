@@ -20,17 +20,14 @@ public class RandomItem : MonoBehaviour
                 if(!playerPassage[0])
                 {
                     playerPassage[0] = true;
-                    GameObject item = Instantiate(items[randomIndex]);
-                    item.GetComponent<Items>().run(player1);
-                   
+                    items[randomIndex].GetComponent<Items>().run(player1);
                 }
             } else
             {
                 if (!playerPassage[1])
                 {
                     playerPassage[1] = true;
-                    GameObject item = Instantiate(items[randomIndex]);
-                    item.GetComponent<Items>().run(player1);
+                    items[randomIndex].GetComponent<Items>().run(player1);
                 }
             }
         }
