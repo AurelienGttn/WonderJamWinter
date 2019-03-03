@@ -23,6 +23,8 @@ public class playerMovement : MonoBehaviour
 
     public GameObject deathMenu;
 
+    
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -162,8 +164,11 @@ public class playerMovement : MonoBehaviour
 
     public void death()
     {
-        mustDie = true;
-        sphere.SetActive(true);
+        if (!ItemInvulnerabilite.isInvulnerable)
+        {
+            mustDie = true;
+            sphere.SetActive(true);
+        }
     }
 
 
