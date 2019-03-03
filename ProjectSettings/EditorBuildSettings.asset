@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fin.unity
     guid: fb21afa5246fb5547a7ccf37b10a8cd5
+  - enabled: 0
+    path: Assets/Scenes/Capture.unity
+    guid: 13231469eb583e841a5d76c9431867a8
   m_configObjects: {}
