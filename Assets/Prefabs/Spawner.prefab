@@ -47,6 +47,25 @@ MonoBehaviour:
   player2Camera: {fileID: 0}
   obstacles:
   - prefab: {fileID: 1777959143, guid: 70b82fde50a246446a393a576c761442, type: 3}
-    speed: 500
-    cooldown: 1
+    cooldown: 2
     parent: {fileID: 0}
+  - prefab: {fileID: 4850707653618866861, guid: e5817cd1ff9b26240b885d997e24a0d2,
+      type: 3}
+    cooldown: 5
+    parent: {fileID: 0}
+  - prefab: {fileID: 1509885573, guid: 30f86e62575d50e4293d1362c1a93be7, type: 3}
+    cooldown: 7
+    parent: {fileID: 0}
+  - prefab: {fileID: 3749512232657392960, guid: dbc31f69174957642b29ea9786ee693d,
+      type: 3}
+    cooldown: 7
+    parent: {fileID: 0}
+  - prefab: {fileID: 5813366543423932175, guid: df26805b376457341a4b5b2e48ec8041,
+      type: 3}
+    cooldown: 15
+    parent: {fileID: 0}
+  - prefab: {fileID: 5243612429282842305, guid: fd29d60c7425d3f4b81c2d01b712b580,
+      type: 3}
+    cooldown: 12
+    parent: {fileID: 0}
+  spawnHeightRange: 20
