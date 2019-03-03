@@ -9,6 +9,9 @@ public class TriggerFin : MonoBehaviour
     private void Start()
     {
         score = FindObjectOfType<Score>();
+
+        //p1PP = GameObject.Find("CameraJoueur1").GetComponent<PostProcessingBehaviour>().profile;
+        //p2PPP = GameObject.Find("CameraJoueur2").GetComponent<PostProcessingBehaviour>().profile;
     }
 
     private void OnTriggerEnter(Collider other)

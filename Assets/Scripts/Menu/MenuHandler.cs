@@ -32,6 +32,7 @@ public class MenuHandler : MonoBehaviour
         //{
         //    GameObject.DestroyImmediate(score);
         //}
+        
         SceneManager.LoadScene(1);
         //SceneManager.LoadScene("MainScene", LoadSceneMode.Single);
 
