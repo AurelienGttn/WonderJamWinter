@@ -2,7 +2,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class MenuHandler : MonoBehaviour
 {
@@ -27,7 +26,14 @@ public class MenuHandler : MonoBehaviour
     public void onClickbtn_Play()
     {
         SceneManager.LoadScene(1);
-       
+
+    }
+
+
+    public void onClickbtn_Menu()
+    {
+        SceneManager.LoadScene(0);
+
     }
 
     public void onClickIntructions()
@@ -55,7 +61,7 @@ public class MenuHandler : MonoBehaviour
 
     public IEnumerator menuToCredits()
     {
-      
+
         float a = 1;
         while (a >= 0)
         {
@@ -64,7 +70,7 @@ public class MenuHandler : MonoBehaviour
             a -= 0.05f;
         }
         canvasMenu.SetActive(false);
-        
+
 
         yield return new WaitForSeconds(0.5f);
         canvasCredits.SetActive(true);
@@ -76,7 +82,7 @@ public class MenuHandler : MonoBehaviour
             a += 0.05f;
         }
 
-      
+
 
 
 
@@ -114,7 +120,7 @@ public class MenuHandler : MonoBehaviour
 
     public IEnumerator creditsToMenu()
     {
-     
+
         float a = 1;
         while (a >= 0)
         {
@@ -176,7 +182,7 @@ public class MenuHandler : MonoBehaviour
             setAlphaObject(child.gameObject, a);
         }
 
-       
+
     }
 
     public void Exit()
