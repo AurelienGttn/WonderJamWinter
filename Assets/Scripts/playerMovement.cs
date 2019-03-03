@@ -204,14 +204,6 @@ public class playerMovement : MonoBehaviour
 
     }
 
-    private void OnDrawGizmos()
-    {
-
-        Gizmos.color = Color.yellow;
-        Vector3 offset = new Vector3(80, 0, 0);
-        //Gizmos.DrawSphere(transform.position + offset, 30);
-    }
-
     public void pushAsteroids(float time)
     {
         pushAsteroid = true;
