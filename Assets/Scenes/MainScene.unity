@@ -915,6 +915,16 @@ PrefabInstance:
       propertyPath: deathMenu
       value: 
       objectReference: {fileID: 462220610}
+    - target: {fileID: 4415660932843089193, guid: 5112045a66dca7e449641256379019a3,
+        type: 3}
+      propertyPath: iconsJ1
+      value: 
+      objectReference: {fileID: 1441786483}
+    - target: {fileID: 4415660932843089193, guid: 5112045a66dca7e449641256379019a3,
+        type: 3}
+      propertyPath: iconsJ2
+      value: 
+      objectReference: {fileID: 1441786482}
     - target: {fileID: 1265257779, guid: 5112045a66dca7e449641256379019a3, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1731,8 +1741,52 @@ PrefabInstance:
       propertyPath: m_PixelPerfect
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 829167809, guid: acb835efca80ec341b06fa02b304977d, type: 3}
+      propertyPath: m_Name
+      value: FlouJ1
+      objectReference: {fileID: 0}
+    - target: {fileID: 170367587, guid: acb835efca80ec341b06fa02b304977d, type: 3}
+      propertyPath: m_Name
+      value: PressionJ1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1186042795, guid: acb835efca80ec341b06fa02b304977d, type: 3}
+      propertyPath: m_Name
+      value: InvulneabiliteJ1
+      objectReference: {fileID: 0}
+    - target: {fileID: 361946383, guid: acb835efca80ec341b06fa02b304977d, type: 3}
+      propertyPath: m_Name
+      value: RepoussoirJ1
+      objectReference: {fileID: 0}
+    - target: {fileID: 135190712, guid: acb835efca80ec341b06fa02b304977d, type: 3}
+      propertyPath: m_Name
+      value: FlouJ2
+      objectReference: {fileID: 0}
+    - target: {fileID: 70251612, guid: acb835efca80ec341b06fa02b304977d, type: 3}
+      propertyPath: m_Name
+      value: PressionJ2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445792781, guid: acb835efca80ec341b06fa02b304977d, type: 3}
+      propertyPath: m_Name
+      value: InvulneabiliteJ2
+      objectReference: {fileID: 0}
+    - target: {fileID: 370833931, guid: acb835efca80ec341b06fa02b304977d, type: 3}
+      propertyPath: m_Name
+      value: RepoussoirJ2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acb835efca80ec341b06fa02b304977d, type: 3}
+--- !u!1 &1441786482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 775842186, guid: acb835efca80ec341b06fa02b304977d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1441786481}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1441786483 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1621713513, guid: acb835efca80ec341b06fa02b304977d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1441786481}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1725553108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1844,6 +1898,16 @@ PrefabInstance:
       propertyPath: deathMenu
       value: 
       objectReference: {fileID: 2102513667}
+    - target: {fileID: 1711655344626839263, guid: dfc9ff7c7447284448a1e3bcaa9c047d,
+        type: 3}
+      propertyPath: iconsJ1
+      value: 
+      objectReference: {fileID: 1441786483}
+    - target: {fileID: 1711655344626839263, guid: dfc9ff7c7447284448a1e3bcaa9c047d,
+        type: 3}
+      propertyPath: iconsJ2
+      value: 
+      objectReference: {fileID: 1441786482}
     - target: {fileID: 1711655344626839260, guid: dfc9ff7c7447284448a1e3bcaa9c047d,
         type: 3}
       propertyPath: m_LocalPosition.x
