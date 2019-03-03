@@ -36,6 +36,7 @@ public class TrouNoir : MonoBehaviour
         if (other.tag == "Player")
         {
             Debug.Log("Kill Player");
+            other.gameObject.GetComponent<playerMovement>().death();
         }
     }
 }
