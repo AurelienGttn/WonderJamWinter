@@ -4,50 +4,39 @@ using UnityEngine;
 
 public class Explosif : MonoBehaviour
 {
-    private Rigidbody rbExplosif;
     public GameObject explosion;
-    public GameObject barrel;
-    public GameObject panelPlayer1;
-    public GameObject panelPlayer2;
-    public GameObject player1;
-    public GameObject player2; 
-
-    // Start is called before the first frame update
+    private GameObject player1;
+    private GameObject player2; 
+    
     void Start()
     {
-        rbExplosif = GetComponent<Rigidbody>();
+
+        player1 = GameObject.Find("Player 1");
+        player2 = GameObject.Find("Player 2");
 
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    private void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player"))
         {
-            rbExplosif.GetComponent<MeshRenderer>().enabled = false; 
-            explosion.SetActive(true); 
-            if(other.name == "Player 1")
+            GetComponent<MeshRenderer>().enabled = false;
+            explosion.SetActive(true);
+            if (collision.collider.name == "Player 1")
             {
-                StartCoroutine(WaitGameOver(player1, panelPlayer1));
-                
+                StartCoroutine(WaitGameOver(player1));
             }
-            if (other.name == "Player 2")
+            if (collision.collider.name == "Player 2")
             {
-               StartCoroutine(WaitGameOver(player2, panelPlayer2));
+                StartCoroutine(WaitGameOver(player2));
             }
 
         }
     }
 
-    IEnumerator WaitGameOver(GameObject player, GameObject panelPlayer)
+    IEnumerator WaitGameOver(GameObject player)
     {
-        Destroy(player);
-        yield return new WaitForSeconds(1);
-        panelPlayer.SetActive(true);
+        yield return new WaitForSeconds(0.1f);
+        player.GetComponent<playerMovement>().death();
     }
 }

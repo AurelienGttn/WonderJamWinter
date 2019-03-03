@@ -1,9 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
-    public float speed = 3.0f;
+    public float speed = 15.0f;
     public float pression = 100.0f;
 
     public bool isPlayer1;
@@ -13,10 +14,14 @@ public class playerMovement : MonoBehaviour
 
     private Rigidbody rb;
     private float limitMag = 0.3f;
-    private float mashForce = 10.0f;
+    [SerializeField] private float mashForce = 10.0f;
 
     private bool mustDie = false;
     public static bool IsInputEnabled = false;
+
+    public GameObject sphere;
+
+    public GameObject deathMenu;
 
     // Start is called before the first frame update
     void Awake()
@@ -101,7 +106,7 @@ public class playerMovement : MonoBehaviour
         }
         if (force != 0.0/* && pression > 0*/)
         {
-            pression = pression - force/10;
+            pression = pression - force / 10;
             rb.AddForce(force * transform.right * speed);
             if (pression > 0)
             {
@@ -140,7 +145,13 @@ public class playerMovement : MonoBehaviour
 
         if (mustDie)
         {
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
+            GetComponent<Rigidbody>().freezeRotation = false;
+            GetComponent<Rigidbody>().angularDrag = 0;
+            GetComponent<Rigidbody>().drag = 0;
+            GetComponent<Rigidbody>().AddTorque(10, 10, 10);
+            StartCoroutine("canvasDeath");
+            gameObject.GetComponent<playerMovement>().enabled = false;
         }
         }
 
@@ -152,5 +163,34 @@ public class playerMovement : MonoBehaviour
     public void death()
     {
         mustDie = true;
+        sphere.SetActive(true);
+    }
+
+
+
+    public IEnumerator canvasDeath()
+    {
+        float a = 0;
+
+        yield return new WaitForSeconds(0.5f);
+        deathMenu.SetActive(true);
+        MenuHandler.setAlphaObject(deathMenu, 0);
+        deathMenu.GetComponent<CanvasRenderer>().SetAlpha(0);
+        while (a <= 1)
+        {
+            yield return new WaitForSeconds(0.01f);
+            MenuHandler.setAlphaObject(deathMenu, a);
+            deathMenu.GetComponent<CanvasRenderer>().SetAlpha(a);
+            a += 0.05f;
+        }
+
+    }
+
+    private void OnDrawGizmos()
+    {
+
+        Gizmos.color = Color.yellow;
+        Vector3 offset = new Vector3(80, 0, 0);
+        //Gizmos.DrawSphere(transform.position + offset, 30);
     }
 }
