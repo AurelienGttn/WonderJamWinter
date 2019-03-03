@@ -1233,7 +1233,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1111212322}
   m_Layer: 0
-  m_Name: BlackHole
+  m_Name: BlackHoles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1602,6 +1602,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 494186280}
+    - target: {fileID: 1739465574, guid: acb835efca80ec341b06fa02b304977d, type: 3}
+      propertyPath: player1
+      value: 
+      objectReference: {fileID: 494186282}
+    - target: {fileID: 1739465574, guid: acb835efca80ec341b06fa02b304977d, type: 3}
+      propertyPath: player2
+      value: 
+      objectReference: {fileID: 1243387147}
     - target: {fileID: 353153291116443261, guid: acb835efca80ec341b06fa02b304977d,
         type: 3}
       propertyPath: m_AnchorMax.x
