@@ -64,7 +64,7 @@ public class ItemJauge : MonoBehaviour, Items
             player1.GetComponent<playerMovement>().pression -= malus;
         }
 
-      
+		Destroy(this);
 
     }
 }

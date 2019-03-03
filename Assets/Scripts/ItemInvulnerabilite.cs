@@ -76,7 +76,8 @@ public class ItemInvulnerabilite : MonoBehaviour, Items
     {
         yield return new WaitForSeconds(invulnerabiliteTime);
         invulnerabilitePlayer.SetActive(false);
-        isInvulnerable = false; 
+        isInvulnerable = false;
+		Destroy(this);
     }
 }
 

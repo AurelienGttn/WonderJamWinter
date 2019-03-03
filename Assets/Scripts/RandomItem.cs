@@ -24,19 +24,24 @@ public class RandomItem : MonoBehaviour
                     playerPassage[0] = true;
                     GameObject item = Instantiate(items[randomIndex]);
 					other.gameObject.GetComponent<playerMovement>().item = item.GetComponent<Items>();
-                   
+
+					Debug.Log(item.name);
 					switch (item.name) {
-						case "ItemJauge":
+						case "ItemJauge(Clone)":
+							Debug.Log("case");
 							GameObject.Find("PressionJ1").GetComponent<Image>().enabled = true;
 							break;
-						case "ItemInvulnerabilite":
+						case "ItemInvulnerabilite(Clone)":
+							Debug.Log("case");
 							GameObject.Find("InvulnerabiliteJ1").GetComponent<Image>().enabled = true;
 							break;
-						case "ItemPushAsteroid":
+						case "ItemPushAsteroid(Clone)":
+							Debug.Log("case");
 							GameObject.Find("RepoussoirJ1").GetComponent<Image>().enabled = true;
 							break;
-						case "ItemFlouJoueur":
-							GameObject.Find("FlouJ1").SetActive(true);
+						case "ItemFlouJoueur(Clone)":
+							Debug.Log("case");
+							GameObject.Find("FlouJ1").GetComponent<Image>().enabled = true;
 							break;
 					}
                 }
@@ -49,18 +54,19 @@ public class RandomItem : MonoBehaviour
                     //item.GetComponent<Items>().run(player1);
 					other.gameObject.GetComponent<playerMovement>().item = item.GetComponent<Items>();
 
+					Debug.Log(item.name);
 					switch (item.name) {
-						case "ItemJauge":
-							GameObject.Find("PressionJ2").SetActive(true);
+						case "ItemJauge(Clone)":
+							GameObject.Find("PressionJ2").GetComponent<Image>().enabled = true;
 							break;
-						case "ItemInvulnerabilite":
-							GameObject.Find("InvulnerabiliteJ2").SetActive(true);
+						case "ItemInvulnerabilite(Clone)":
+							GameObject.Find("InvulnerabiliteJ2").GetComponent<Image>().enabled = true;
 							break;
-						case "ItemPushAsteroid":
-							GameObject.Find("RepoussoirJ2").SetActive(true);
+						case "ItemPushAsteroid(Clone)":
+							GameObject.Find("RepoussoirJ2").GetComponent<Image>().enabled = true;
 							break;
-						case "ItemFlouJoueur":
-							GameObject.Find("FlouJ2").SetActive(true);
+						case "ItemFlouJoueur(Clone)":
+							GameObject.Find("FlouJ2").GetComponent<Image>().enabled = true;
 							break;
 					}
 				}

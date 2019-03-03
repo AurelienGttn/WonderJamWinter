@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class playerMovement : MonoBehaviour
 {
@@ -52,7 +53,7 @@ public class playerMovement : MonoBehaviour
 
 		if (timeToPush > 0) {
 			Debug.Log("Asteroid");
-			timeToPush -= Time.deltaTime;
+			timeToPush -= Time.fixedDeltaTime;
 
 		}
 
@@ -72,13 +73,14 @@ public class playerMovement : MonoBehaviour
 					} else {
 						force = 0.0f;
 					}
-					if (Input.GetButtonDown("J1_BButton")) {
-						// Déclanchment de l'item
-						//pression = 100.0f;
-						item.run(isPlayer1);
-						foreach (Transform child in iconsJ1.transform) {
-							child.gameObject.SetActive(false);
-						}
+
+				}
+				if (Input.GetButtonDown("J1_BButton")) {
+					// Déclanchment de l'item
+					//pression = 100.0f;
+					item.run(isPlayer1);
+					foreach (Transform child in iconsJ1.transform) {
+						child.gameObject.GetComponent<Image>().enabled = false;
 					}
 				}
 			} else {
@@ -92,12 +94,14 @@ public class playerMovement : MonoBehaviour
 					} else {
 						force = 0.0f;
 					}
-					if (Input.GetButtonDown("J2_BButton")) {
-						//pression = 100.0f;
-						item.run(isPlayer1);
-						foreach(Transform child in iconsJ2.transform) {
-							child.gameObject.SetActive(false);
-						}
+
+				}
+
+				if (Input.GetButtonDown("J2_BButton")) {
+					//pression = 100.0f;
+					item.run(isPlayer1);
+					foreach (Transform child in iconsJ2.transform) {
+						child.gameObject.GetComponent<Image>().enabled = false;
 					}
 				}
 			}

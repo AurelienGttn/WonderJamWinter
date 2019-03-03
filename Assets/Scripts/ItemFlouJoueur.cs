@@ -107,6 +107,7 @@ public class ItemFlouJoueur : MonoBehaviour, Items
             bloomTempSet.bloom.intensity = 0.91f;
             p2PPP.bloom.settings = bloomTempSet;
         }
+		Destroy(this);
     }
     
 }
