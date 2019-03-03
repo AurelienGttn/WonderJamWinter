@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Score : MonoBehaviour
 {
@@ -25,9 +24,22 @@ public class Score : MonoBehaviour
         player2 = GameObject.Find("Player 2").transform;
     }
 
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().name != "MainScene")
+            return;
+        if ((player1.gameObject.GetComponent<playerMovement>().enabled == false && player2.gameObject.GetComponent<playerMovement>().enabled == false))
+        {
+            SetScores();
+            SceneManager.LoadScene("Fin", LoadSceneMode.Single);
+        }
+    }
+
     public void SetScores()
     {
-        scoreP1 = player1.position.x;
-        scoreP2 = player2.position.x;
+        if (player1.gameObject.GetComponent<playerMovement>().enabled == true)
+            scoreP1 = player1.position.x;
+        if (player2.gameObject.GetComponent<playerMovement>().enabled == true)
+            scoreP2 = player2.position.x;
     }
 }

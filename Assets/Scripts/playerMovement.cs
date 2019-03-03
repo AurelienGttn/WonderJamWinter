@@ -17,6 +17,7 @@ public class playerMovement : MonoBehaviour
     [SerializeField] private float mashForce = 10.0f;
 
     private bool mustDie = false;
+    public static bool IsInputEnabled = false;
 
     public GameObject sphere;
 
@@ -38,56 +39,58 @@ public class playerMovement : MonoBehaviour
         float moveHorizontal;
         float moveVertical;
         float force;
-        if (isPlayer1)
+        if(IsInputEnabled)
         {
-            moveHorizontal = Input.GetAxis("J1_LeftStickHorizontal");
-            moveVertical = Input.GetAxis("J1_LeftStickVertical");
-            if (pression > 0)
+            if (isPlayer1)
             {
-                force = Input.GetAxis("J1_RightTrigger");
-            }
-            else
-            {
-                if (Input.GetButtonDown("J1_AButton"))
+                moveHorizontal = Input.GetAxis("J1_LeftStickHorizontal");
+                moveVertical = Input.GetAxis("J1_LeftStickVertical");
+                if (pression > 0)
                 {
-                    force = mashForce;
+                    force = Input.GetAxis("J1_RightTrigger");
                 }
                 else
                 {
-                    force = 0.0f;
+                    if (Input.GetButtonDown("J1_AButton"))
+                    {
+                        force = mashForce;
+                    }
+                    else
+                    {
+                        force = 0.0f;
+                    }
+                    if (Input.GetButtonDown("J1_BButton"))
+                    {
+                        pression = 100.0f;
+                    }
                 }
-                if (Input.GetButtonDown("J1_BButton"))
-                {
-                    pression = 100.0f;
-                }
-            }
-        }
-        else
-        {
-            moveHorizontal = Input.GetAxis("J2_LeftStickHorizontal");
-            moveVertical = Input.GetAxis("J2_LeftStickVertical");
-            if (pression > 0)
-            {
-                force = Input.GetAxis("J2_RightTrigger");
             }
             else
             {
-                if (Input.GetButtonDown("J2_AButton"))
+                moveHorizontal = Input.GetAxis("J2_LeftStickHorizontal");
+                moveVertical = Input.GetAxis("J2_LeftStickVertical");
+                if (pression > 0)
                 {
-                    force = mashForce;
+                    force = Input.GetAxis("J2_RightTrigger");
                 }
                 else
                 {
-                    force = 0.0f;
-                }
-                if (Input.GetButtonDown("J2_BButton"))
-                {
-                    pression = 100.0f;
+                    if (Input.GetButtonDown("J2_AButton"))
+                    {
+                        force = mashForce;
+                    }
+                    else
+                    {
+                        force = 0.0f;
+                    }
+                    if (Input.GetButtonDown("J2_BButton"))
+                    {
+                        pression = 100.0f;
+                    }
                 }
             }
-        }
 
-        Vector3 orientation = new Vector3(moveHorizontal, moveVertical, 0.0f);
+            Vector3 orientation = new Vector3(moveHorizontal, moveVertical, 0.0f);
 
         if (orientation.magnitude > limitMag)
         {
@@ -150,6 +153,10 @@ public class playerMovement : MonoBehaviour
             StartCoroutine("canvasDeath");
             gameObject.GetComponent<playerMovement>().enabled = false;
         }
+        }
+
+
+        
 
     }
 
@@ -184,6 +191,6 @@ public class playerMovement : MonoBehaviour
 
         Gizmos.color = Color.yellow;
         Vector3 offset = new Vector3(80, 0, 0);
-        Gizmos.DrawSphere(transform.position + offset, 30);
+        //Gizmos.DrawSphere(transform.position + offset, 30);
     }
 }

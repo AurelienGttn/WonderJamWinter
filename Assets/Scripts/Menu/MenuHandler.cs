@@ -14,6 +14,7 @@ public class MenuHandler : MonoBehaviour
     public GameObject backButton;
     public GameObject backButton2;
 
+    public Button test;
 
 
     public void Start()
@@ -26,8 +27,20 @@ public class MenuHandler : MonoBehaviour
 
     public void onClickbtn_Play()
     {
+        GameObject score = GameObject.Find("Score");
+        if (score != null)
+        {
+            GameObject.DestroyImmediate(score);
+        }
         SceneManager.LoadScene(1);
-       
+
+    }
+
+
+    public void onClickbtn_Menu()
+    {
+        SceneManager.LoadScene(0);
+
     }
 
     public void onClickIntructions()
@@ -55,7 +68,12 @@ public class MenuHandler : MonoBehaviour
 
     public IEnumerator menuToCredits()
     {
-      
+       
+
+       // backButton.GetComponent<Button>().colors.normalColor.a(0);
+
+
+     //   Debug.Log(colorBlock.normalColor);
         float a = 1;
         while (a >= 0)
         {
@@ -64,10 +82,14 @@ public class MenuHandler : MonoBehaviour
             a -= 0.05f;
         }
         canvasMenu.SetActive(false);
-        
+
 
         yield return new WaitForSeconds(0.5f);
         canvasCredits.SetActive(true);
+
+        ColorBlock colorBlock = backButton.GetComponent<Button>().colors;
+        colorBlock.normalColor = new Color(0, 0, 0, 101);
+        backButton.GetComponent<Button>().colors = colorBlock;
         setAlphaObject(canvasCredits, 0);
         while (a <= 1)
         {
@@ -76,7 +98,7 @@ public class MenuHandler : MonoBehaviour
             a += 0.05f;
         }
 
-      
+
 
 
 
@@ -114,7 +136,7 @@ public class MenuHandler : MonoBehaviour
 
     public IEnumerator creditsToMenu()
     {
-     
+
         float a = 1;
         while (a >= 0)
         {
@@ -176,7 +198,7 @@ public class MenuHandler : MonoBehaviour
             setAlphaObject(child.gameObject, a);
         }
 
-       
+
     }
 
     public void Exit()

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 700445432}
   - component: {fileID: 700445433}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +79,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1269015211}
   - component: {fileID: 1269015212}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Spot Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1337569481}
   - component: {fileID: 1337569482}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Spot Light (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2144883916}
   - component: {fileID: 2144883917}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 1360893991}
   - component: {fileID: 7242075709649227155}
   - component: {fileID: 1360893989}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SpaceShip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3749512232657392960}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -313,7 +313,7 @@ Transform:
   - {fileID: 1337569481}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &1360893991
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -386,7 +386,6 @@ MonoBehaviour:
   Players: []
   laser: {fileID: 5560061754511373923, guid: 0a4fccc48ec3c6b42acb78c48deec88c, type: 3}
   laserVelocity: 10
-  laserSound: {fileID: 8300000, guid: 06da521403cd8e6438dbc08bd3c5044b, type: 3}
 --- !u!1 &8934080384138779756
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,7 +397,8 @@ GameObject:
   - component: {fileID: 4933582118155162248}
   - component: {fileID: 931031946055110290}
   - component: {fileID: 4323066144332908517}
-  m_Layer: 0
+  - component: {fileID: 6673198189071742090}
+  m_Layer: 12
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,3 +464,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &6673198189071742090
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8934080384138779756}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 6ec42d19f0b88284aa5a9c421c47b2e5, type: 3}

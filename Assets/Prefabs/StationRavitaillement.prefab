@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2007091116}
   - component: {fileID: 2007091117}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Area Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 5243612429282842318}
   - component: {fileID: 5243612429282842319}
   - component: {fileID: 1998579849}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: StationRavitaillement
   m_TagString: Station
   m_Icon: {fileID: 0}
@@ -156,6 +156,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: c742a0228731b0a4ab616aee9243b065, type: 3}
       propertyPath: m_Name
       value: barrel (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c742a0228731b0a4ab616aee9243b065, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c742a0228731b0a4ab616aee9243b065, type: 3}
       propertyPath: m_LocalPosition.x
@@ -232,6 +236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: barrel (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c742a0228731b0a4ab616aee9243b065, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c742a0228731b0a4ab616aee9243b065, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5
@@ -306,6 +314,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: c742a0228731b0a4ab616aee9243b065, type: 3}
       propertyPath: m_Name
       value: barrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c742a0228731b0a4ab616aee9243b065, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c742a0228731b0a4ab616aee9243b065, type: 3}
       propertyPath: m_LocalPosition.x
@@ -382,6 +394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stationLarge
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: e4964c9b65913c44092202a7bd16c758, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e4964c9b65913c44092202a7bd16c758, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.5
@@ -450,6 +466,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b6b6f3e8e07ffdc4db0d0031f74ae32f, type: 3}
       propertyPath: m_Name
       value: consoleScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b6b6f3e8e07ffdc4db0d0031f74ae32f, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b6b6f3e8e07ffdc4db0d0031f74ae32f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -525,6 +545,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: b6c02cbf5bb4231418039d0e0c27ee9b, type: 3}
       propertyPath: m_Name
       value: portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b6c02cbf5bb4231418039d0e0c27ee9b, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b6c02cbf5bb4231418039d0e0c27ee9b, type: 3}
       propertyPath: m_LocalPosition.x
