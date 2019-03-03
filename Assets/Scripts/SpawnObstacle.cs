@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SpawnObstacle : MonoBehaviour
 {
+    [SerializeField] private float timeBeforeSpawn = 5f;
 
     private Camera player1Camera, player2Camera;
     private Transform player1, player2;
@@ -186,7 +187,7 @@ public class SpawnObstacle : MonoBehaviour
 
     private IEnumerator WaitBeforeSpawning()
     {
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(timeBeforeSpawn);
 
         foreach (ObstacleSpawn obstacle in obstacles)
         {
