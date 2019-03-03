@@ -584,7 +584,7 @@ PrefabInstance:
     - target: {fileID: 4154015587083418805, guid: 0c962d529ae386a48811c45b03674322,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4154015587083418805, guid: 0c962d529ae386a48811c45b03674322,
         type: 3}
@@ -904,18 +904,6 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &601683488 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1508813532833850209, guid: acb835efca80ec341b06fa02b304977d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1441786481}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &631842668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1153,7 +1141,7 @@ PrefabInstance:
     - target: {fileID: 5550548933222930966, guid: 026cd806e30838d4ea33d8063bae536a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5550548933222930966, guid: 026cd806e30838d4ea33d8063bae536a,
         type: 3}
@@ -1410,7 +1398,7 @@ PrefabInstance:
         type: 3}
       propertyPath: obstacles.Array.data[1].prefab
       value: 
-      objectReference: {fileID: 5243612429282842305, guid: fd29d60c7425d3f4b81c2d01b712b580,
+      objectReference: {fileID: 6595998408625896220, guid: d5687f3e355c040489ffa1512741580b,
         type: 3}
     - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
         type: 3}
@@ -1420,18 +1408,18 @@ PrefabInstance:
     - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
         type: 3}
       propertyPath: obstacles.Array.data[1].cooldown
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
         type: 3}
       propertyPath: obstacles.Array.data[1].parent
       value: 
-      objectReference: {fileID: 634502301}
+      objectReference: {fileID: 901846491}
     - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
         type: 3}
       propertyPath: obstacles.Array.data[2].prefab
       value: 
-      objectReference: {fileID: 5813366543423932175, guid: df26805b376457341a4b5b2e48ec8041,
+      objectReference: {fileID: 1509885573, guid: 30f86e62575d50e4293d1362c1a93be7,
         type: 3}
     - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
         type: 3}
@@ -1442,12 +1430,12 @@ PrefabInstance:
         type: 3}
       propertyPath: obstacles.Array.data[2].parent
       value: 
-      objectReference: {fileID: 1111212322}
+      objectReference: {fileID: 1822051240}
     - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
         type: 3}
       propertyPath: obstacles.Array.data[3].prefab
       value: 
-      objectReference: {fileID: 4850707653618866861, guid: e5817cd1ff9b26240b885d997e24a0d2,
+      objectReference: {fileID: 3749512232657392960, guid: dbc31f69174957642b29ea9786ee693d,
         type: 3}
     - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
         type: 3}
@@ -1458,7 +1446,7 @@ PrefabInstance:
         type: 3}
       propertyPath: obstacles.Array.data[3].parent
       value: 
-      objectReference: {fileID: 901846491}
+      objectReference: {fileID: 1158975139}
     - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
         type: 3}
       propertyPath: obstacles.Array.data[0].cooldown
@@ -1468,7 +1456,7 @@ PrefabInstance:
         type: 3}
       propertyPath: obstacles.Array.data[4].prefab
       value: 
-      objectReference: {fileID: 1509885573, guid: 30f86e62575d50e4293d1362c1a93be7,
+      objectReference: {fileID: 5813366543423932175, guid: df26805b376457341a4b5b2e48ec8041,
         type: 3}
     - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
         type: 3}
@@ -1479,12 +1467,12 @@ PrefabInstance:
         type: 3}
       propertyPath: obstacles.Array.data[4].parent
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1111212322}
     - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
         type: 3}
       propertyPath: obstacles.Array.data[5].prefab
       value: 
-      objectReference: {fileID: 1509885573, guid: 30f86e62575d50e4293d1362c1a93be7,
+      objectReference: {fileID: 5243612429282842305, guid: fd29d60c7425d3f4b81c2d01b712b580,
         type: 3}
     - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
         type: 3}
@@ -1495,12 +1483,12 @@ PrefabInstance:
         type: 3}
       propertyPath: obstacles.Array.data[5].parent
       value: 
-      objectReference: {fileID: 1822051240}
+      objectReference: {fileID: 634502301}
     - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
         type: 3}
       propertyPath: obstacles.Array.data[5].prefab
       value: 
-      objectReference: {fileID: 1509885573, guid: 30f86e62575d50e4293d1362c1a93be7,
+      objectReference: {fileID: 5243612429282842305, guid: fd29d60c7425d3f4b81c2d01b712b580,
         type: 3}
     - target: {fileID: 4258545861526639740, guid: d8135c242ede5294cbd2ad193cac40df,
         type: 3}
@@ -1511,7 +1499,7 @@ PrefabInstance:
         type: 3}
       propertyPath: obstacles.Array.data[5].parent
       value: 
-      objectReference: {fileID: 1822051240}
+      objectReference: {fileID: 634502301}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8135c242ede5294cbd2ad193cac40df, type: 3}
 --- !u!1 &1111212321
@@ -2011,7 +1999,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Bulle2
       value: 
-      objectReference: {fileID: 601683488}
+      objectReference: {fileID: 0}
     - target: {fileID: 3291502983881737778, guid: 88affa45bfc909b43b834f8e40e8e84d,
         type: 3}
       propertyPath: Bulle3

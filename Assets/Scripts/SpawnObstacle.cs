@@ -64,7 +64,7 @@ public class SpawnObstacle : MonoBehaviour
             if (obstacle.parent.name == "BlackHoles")
             {
                 if (Physics.OverlapSphere(spawnPos, 30, blackholesLayermask).Length == 0
-                    && Physics.OverlapSphere(spawnPos, 5, stationsLayermask).Length == 0
+                    && Physics.OverlapSphere(spawnPos, 10, stationsLayermask).Length == 0
                     && Physics.OverlapSphere(spawnPos, 5, spaceshipsLayermask).Length == 0)
                 {
                     newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
@@ -75,8 +75,9 @@ public class SpawnObstacle : MonoBehaviour
                 if (player1.position.x < player2.position.x)
                 {
                     if (Physics.OverlapSphere(spawnPos, 30, stationsLayermask).Length == 0
-                        && Physics.OverlapSphere(spawnPos, 5, blackholesLayermask).Length == 0
-                        && Physics.OverlapSphere(spawnPos, 5, spaceshipsLayermask).Length == 0)
+                        && Physics.OverlapSphere(spawnPos, 10, blackholesLayermask).Length == 0
+                        && Physics.OverlapSphere(spawnPos, 5, spaceshipsLayermask).Length == 0
+                        && Physics.OverlapSphere(spawnPos, 5, movingObstaclesLayermask).Length == 0)
                     {
                         newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
                     }
@@ -93,14 +94,15 @@ public class SpawnObstacle : MonoBehaviour
             }
             else if (obstacle.parent.name == "Bumpers")
             {
-                if (Physics.OverlapSphere(spawnPos, 10, bumpersLayermask).Length == 0)
+                if (Physics.OverlapSphere(spawnPos, 10, bumpersLayermask).Length == 0
+                    && Physics.OverlapSphere(spawnPos, 5, movingObstaclesLayermask).Length == 0)
                 {
                     newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
                 }
             }
             else
             {
-                if (Physics.OverlapSphere(spawnPos, 5, movingObstaclesLayermask).Length == 0)
+                if (Physics.OverlapSphere(spawnPos, 2, movingObstaclesLayermask).Length == 0)
                 {
                     newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
                 }
@@ -121,7 +123,7 @@ public class SpawnObstacle : MonoBehaviour
             if (obstacle.parent.name == "BlackHoles")
             {
                 if (Physics.OverlapSphere(spawnPos, 30, blackholesLayermask).Length == 0
-                    && Physics.OverlapSphere(spawnPos, 5, stationsLayermask).Length == 0
+                    && Physics.OverlapSphere(spawnPos, 10, stationsLayermask).Length == 0
                     && Physics.OverlapSphere(spawnPos, 5, spaceshipsLayermask).Length == 0)
                 {
                     newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
@@ -132,8 +134,9 @@ public class SpawnObstacle : MonoBehaviour
                 if (player2.position.x < player1.position.x)
                 {
                     if (Physics.OverlapSphere(spawnPos, 30, stationsLayermask).Length == 0
-                        && Physics.OverlapSphere(spawnPos, 5, blackholesLayermask).Length == 0
-                        && Physics.OverlapSphere(spawnPos, 5, spaceshipsLayermask).Length == 0)
+                        && Physics.OverlapSphere(spawnPos, 10, blackholesLayermask).Length == 0
+                        && Physics.OverlapSphere(spawnPos, 5, spaceshipsLayermask).Length == 0
+                        && Physics.OverlapSphere(spawnPos, 5, movingObstaclesLayermask).Length == 0)
                     {
                         newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
                     }
@@ -150,14 +153,15 @@ public class SpawnObstacle : MonoBehaviour
             }
             else if (obstacle.parent.name == "Bumpers")
             {
-                if (Physics.OverlapSphere(spawnPos, 10, bumpersLayermask).Length == 0)
+                if (Physics.OverlapSphere(spawnPos, 10, bumpersLayermask).Length == 0
+                    && Physics.OverlapSphere(spawnPos, 5, movingObstaclesLayermask).Length == 0)
                 {
                     newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
                 }
             }
             else
             {
-                if (Physics.OverlapSphere(spawnPos, 5, movingObstaclesLayermask).Length == 0)
+                if (Physics.OverlapSphere(spawnPos, 2, movingObstaclesLayermask).Length == 0)
                 {
                     newObstacle = Instantiate(obstacle.prefab, spawnPos, Quaternion.identity, obstacle.parent);
                 }

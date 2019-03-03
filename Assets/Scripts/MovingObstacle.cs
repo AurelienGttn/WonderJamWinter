@@ -40,7 +40,7 @@ public class MovingObstacle : MonoBehaviour
             rbMovingObstacle.AddForce(transform.forward * asteroidSpeed * rbMovingObstacle.mass);
             transform.localScale = new Vector3(Random.Range(0.1f, 0.3f), Random.Range(0.1f, 0.3f), Random.Range(0.1f, 0.3f));
         }
-        else if (name.Contains("barrel"))
+        else if (name.Contains("Barrel"))
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, 0);
             rbMovingObstacle.AddForce(transform.forward * barrelSpeed * rbMovingObstacle.mass);

@@ -20,7 +20,7 @@ public class Explosif : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-            GetComponent<MeshRenderer>().enabled = false;
+            GetComponentInChildren<MeshRenderer>().enabled = false;
             explosion.SetActive(true);
             if (collision.collider.name == "Player 1")
             {
