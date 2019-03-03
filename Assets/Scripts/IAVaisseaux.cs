@@ -2,19 +2,20 @@
 
 public class IAVaisseaux : MonoBehaviour
 {
-    public Rigidbody spaceshipRigidBody;
+    private Rigidbody spaceshipRigidBody;
     public float maxDistanceDetection = 5;
     public float forceFactor = 2;
     public float maxVelocity = 5;
-    public GameObject[] Players;
+    private GameObject[] Players;
     public GameObject laser;
+    [SerializeField] private Transform laserParent;
     private float lastTimeShoot = 0;
     public float laserVelocity = 5;
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.rotation = Quaternion.Euler(-90, 0, 0);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
 
         spaceshipRigidBody = GetComponent<Rigidbody>();
         Players = GameObject.FindGameObjectsWithTag("Player");
@@ -40,27 +41,23 @@ public class IAVaisseaux : MonoBehaviour
     {
         RaycastHit ray;
         Vector3 force;
-        Vector3 res = new Vector3(0, 0, 0);
+        Vector3 res = Vector3.zero;
         for (int i = 0; i <= 360; i += 30)
         {
             Vector3 destination = Quaternion.Euler(0, 0, i) * (new Vector3(0, maxDistanceDetection));
-
             if (Physics.Raycast(transform.position, destination, out ray, maxDistanceDetection))
             {
                 if (ray.transform.tag == "Asteroïde")
                 {
                     force = (transform.position - ray.transform.position).normalized;
-                    force.z = 0;
-                    force.Scale(new Vector3(forceFactor, forceFactor, forceFactor));
+                    force.Scale(new Vector3(forceFactor, forceFactor, 0));
                     spaceshipRigidBody.AddForceAtPosition(force, transform.position);
-
                 }
 
                 if (ray.transform.tag == "Player" && Mathf.Abs((ray.transform.position - transform.position).magnitude) < 1)
                 {
                     force = (transform.position - ray.transform.position).normalized;
-                    force.z = 0;
-                    force.Scale(new Vector3(forceFactor / 5, forceFactor / 5, forceFactor / 5));
+                    force.Scale(new Vector3(forceFactor / 5, forceFactor / 5, 0));
                     spaceshipRigidBody.AddForceAtPosition(force, transform.position);
 
                 }
@@ -81,7 +78,7 @@ public class IAVaisseaux : MonoBehaviour
         RaycastHit ray;
         Vector3 torque = new Vector3();
         float angle;
-        for (int i = 0; i <= 360; i += 20)
+        for (int i = 0; i <= 360; i += 5)
         {
             Vector3 destination = Quaternion.Euler(0, 0, i) * (new Vector3(0, maxDistanceDetection));
 
@@ -89,7 +86,7 @@ public class IAVaisseaux : MonoBehaviour
             {
                 if (ray.transform.tag == "Player" && isTheNearestPlayer(ray.transform.gameObject))
                 {
-                    angle = Vector3.SignedAngle((ray.transform.position - transform.position), Quaternion.Euler(0, 0, -90) * transform.forward, new Vector3(0, 0, 1));
+                    angle = Vector3.SignedAngle((ray.transform.position - transform.position), transform.right, new Vector3(0, 0, 1));
                     torque.z = -angle;
                     torque.x = 0;
                     torque.y = 0;
@@ -98,7 +95,7 @@ public class IAVaisseaux : MonoBehaviour
 
                     if (Mathf.Abs(angle) < 10 && Time.time - lastTimeShoot > 1)
                     {
-                        GameObject newLaser = Instantiate(laser);
+                        GameObject newLaser = Instantiate(laser, laserParent);
                         newLaser.transform.position = transform.position;
                         newLaser.GetComponent<laser>().velocity = (ray.transform.position - transform.position).normalized;
                         newLaser.GetComponent<laser>().velocity.Scale(new Vector3(laserVelocity, laserVelocity, laserVelocity));
