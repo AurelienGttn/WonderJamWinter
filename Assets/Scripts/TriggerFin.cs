@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.PostProcessing;
 
 public class TriggerFin : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class TriggerFin : MonoBehaviour
     private void Start()
     {
         score = FindObjectOfType<Score>();
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -16,6 +18,15 @@ public class TriggerFin : MonoBehaviour
         if (other.CompareTag("Player") && other.GetComponent<playerMovement>().enabled == true)
         {
             score.SetScores();
+
+            BloomModel.Settings p1PPP = GameObject.Find("CameraJoueur1").GetComponent<PostProcessingBehaviour>().profile.bloom.settings;
+            BloomModel.Settings p2PPP = GameObject.Find("CameraJoueur2").GetComponent<PostProcessingBehaviour>().profile.bloom.settings;
+            BloomModel.Settings bloomTempSet = p1PPP;
+            bloomTempSet.bloom.intensity = 0.91f;
+            p1PPP = bloomTempSet;
+            p2PPP = bloomTempSet;
+
+
             SceneManager.LoadScene(NomLevel, LoadSceneMode.Single);
         }
     }

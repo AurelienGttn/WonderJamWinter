@@ -12,6 +12,11 @@ public class Decompte : MonoBehaviour
     private bool bulle1explode;
     private bool bulle2explode;
     private bool bulle3explode;
+
+    public AudioClip a1;
+    public AudioClip a2;
+    public AudioClip a3;
+    private AudioSource audios;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +24,7 @@ public class Decompte : MonoBehaviour
         bulle1explode = false;
         bulle2explode = false;
         bulle3explode = false;
+        audios =  GetComponent<AudioSource>();
        
     }
 
@@ -58,7 +64,8 @@ public class Decompte : MonoBehaviour
             GameObject effets =  bulle.transform.Find("CFX_Poof").gameObject;
             effets.SetActive(true);
             ParticleSystem ps =   effets.GetComponent<ParticleSystem>();
-            GetComponent<AudioSource>().enabled = true; 
+            audios.clip = a1;
+            audios.Play();
             this.bulle1explode = true;
             ps.Play();
             Destroy(Bulle1);
@@ -68,6 +75,8 @@ public class Decompte : MonoBehaviour
             GameObject effets =  bulle.transform.Find("CFX_Poof").gameObject;
             effets.SetActive(true);
             ParticleSystem ps =   effets.GetComponent<ParticleSystem>();
+            audios.clip = a2;
+            audios.Play();
             this.bulle2explode = true;
              ps.Play();
             Destroy(Bulle2);
@@ -77,6 +86,8 @@ public class Decompte : MonoBehaviour
             GameObject effets =  bulle.transform.Find("CFX_Poof").gameObject;
             effets.SetActive(true);
             ParticleSystem ps =   effets.GetComponent<ParticleSystem>();
+            audios.clip = a3;
+            audios.Play();
             this.bulle3explode = true;
             Destroy(Bulle3);
              ps.Play();

@@ -39,7 +39,7 @@ public class playerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float moveHorizontal;
         float moveVertical;
@@ -180,8 +180,11 @@ public class playerMovement : MonoBehaviour
 
     public void death()
     {
-        mustDie = true;
-        sphere.SetActive(true);
+        if (!ItemInvulnerabilite.isInvulnerable)
+        {
+            mustDie = true;
+            sphere.SetActive(true);
+        }
     }
 
 
