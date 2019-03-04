@@ -399,6 +399,8 @@ MonoBehaviour:
   mashForce: 10
   sphere: {fileID: 1103464734}
   deathMenu: {fileID: 0}
+  iconsJ1: {fileID: 0}
+  iconsJ2: {fileID: 0}
 --- !u!65 &4415660932843089192
 BoxCollider:
   m_ObjectHideFlags: 0
