@@ -62,34 +62,40 @@ public class Decompte : MonoBehaviour
         if(bulle == Bulle1 && !bulle1explode)
         {
             GameObject effets =  bulle.transform.Find("CFX_Poof").gameObject;
+            GameObject number = bulle.transform.Find("Text").gameObject;
+            number.SetActive(true);
             effets.SetActive(true);
             ParticleSystem ps =   effets.GetComponent<ParticleSystem>();
             audios.clip = a1;
             audios.Play();
             this.bulle1explode = true;
             ps.Play();
-            Destroy(Bulle1);
+            Destroy(Bulle1.gameObject);
         }
         else if(bulle == Bulle2 && !bulle2explode)
         {
             GameObject effets =  bulle.transform.Find("CFX_Poof").gameObject;
+            GameObject number = bulle.transform.Find("Text").gameObject;
+            number.SetActive(true);
             effets.SetActive(true);
             ParticleSystem ps =   effets.GetComponent<ParticleSystem>();
             audios.clip = a2;
             audios.Play();
             this.bulle2explode = true;
              ps.Play();
-            Destroy(Bulle2);
+            Destroy(Bulle2.gameObject);
         }
         else if(bulle == Bulle3 && !bulle3explode)
         {
             GameObject effets =  bulle.transform.Find("CFX_Poof").gameObject;
+            GameObject number = bulle.transform.Find("Text").gameObject;
+            number.SetActive(true);
             effets.SetActive(true);
             ParticleSystem ps =   effets.GetComponent<ParticleSystem>();
             audios.clip = a3;
             audios.Play();
             this.bulle3explode = true;
-            Destroy(Bulle3);
+            Destroy(Bulle3.gameObject);
              ps.Play();
             playerMovement.IsInputEnabled = true;
         }
