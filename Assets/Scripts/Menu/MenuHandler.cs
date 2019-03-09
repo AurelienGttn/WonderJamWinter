@@ -42,7 +42,6 @@ public class MenuHandler : MonoBehaviour
     public void onClickbtn_Menu()
     {
         SceneManager.LoadScene(0);
-
     }
 
     public void onClickIntructions()
@@ -62,6 +61,7 @@ public class MenuHandler : MonoBehaviour
         StartCoroutine("creditsToMenu");
         eventSystem.SetSelectedGameObject(startButton);
     }
+
     public void onClickMenu_Intructions()
     {
         StartCoroutine("IntructionToMenu");
@@ -70,10 +70,7 @@ public class MenuHandler : MonoBehaviour
 
     public IEnumerator menuToCredits()
     {
-
-
         // backButton.GetComponent<Button>().colors.normalColor.a(0);
-
 
         //   Debug.Log(colorBlock.normalColor);
         //float a = 1;
@@ -85,12 +82,10 @@ public class MenuHandler : MonoBehaviour
         //}
         //canvasMenu.SetActive(false);
         canvasMenu.SetActive(false);
-  canvasCredits.SetActive(true);
+        canvasCredits.SetActive(true);
 
         yield return new WaitForSeconds(0.5f);
       
-
-
         //Sprite image;
      
         //backButton.GetComponent<Button>().colors = colorBlock;
@@ -101,46 +96,28 @@ public class MenuHandler : MonoBehaviour
         //    setAlphaObject(canvasCredits, a);
         //    a += 0.05f;
         //}
-
- 
-
-
-
     }
 
 
     public IEnumerator menuToIntructions()
-    {
-
-   
-        canvasMenu.SetActive(false);
+    {        canvasMenu.SetActive(false);
         canvasIntruction.SetActive(true);
         yield return new WaitForSeconds(0.5f);
-
-
-
     }
 
     public IEnumerator creditsToMenu()
     {
-
-
         canvasCredits.SetActive(false);
         canvasMenu.SetActive(true);
         yield return new WaitForSeconds(0.5f);
-
     }
 
 
     public IEnumerator IntructionToMenu()
     {
-
-     
         canvasIntruction.SetActive(false);
         canvasMenu.SetActive(true);
         yield return new WaitForSeconds(0.5f);
-    
-
     }
 
 
@@ -160,7 +137,6 @@ public class MenuHandler : MonoBehaviour
 
     public void Exit()
     {
-
         Application.Quit();
     }
 }
