@@ -552,6 +552,16 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.47058824
       objectReference: {fileID: 0}
+    - target: {fileID: 4219749776626063636, guid: de83d61ad43126a498ea12ef5381773c,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4219749776626063636, guid: de83d61ad43126a498ea12ef5381773c,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de83d61ad43126a498ea12ef5381773c, type: 3}
 --- !u!114 &330016759 stripped
@@ -1744,16 +1754,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 353153291641092141, guid: acb835efca80ec341b06fa02b304977d,
-        type: 3}
-      propertyPath: m_FontData.m_FontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 353153291641092141, guid: acb835efca80ec341b06fa02b304977d,
-        type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 353153291641092141, guid: acb835efca80ec341b06fa02b304977d,
         type: 3}
